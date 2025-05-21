@@ -1,0 +1,122 @@
+@use "../../../../scss/main" as *;
+
+.aboutHeroSec {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .title {
+        color: #fff;
+        margin-bottom: 30px;
+        background: linear-gradient(90deg, #17BEFF 0%, #FCFFFF 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 50px;
+        background: #4D4B4B61;
+        position: relative;
+        border-radius: 10px;
+        padding: 50px 60px;
+
+        .leftSec {
+            .neonEllipse {
+                position: absolute;
+                top: 0;
+                z-index: -1;
+                transform: translateX(-180px);
+            }
+        }
+
+        .rightSec {
+            max-width: 500px;
+
+            h2 {
+                font-family: RacingSansOne;
+                font-size: 40px;
+                line-height: 52px;
+                margin-bottom: 10px;
+                background: linear-gradient(90deg, #17BEFF 0%, #FCFFFF 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .description {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                p {
+                    font-family: Poppins-Regular;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .aboutHeroSec {
+        .content {
+            border-radius: 20px;
+            padding-block: 60px;
+        }
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .aboutHeroSec {
+        .content {
+            border-radius: 20px;
+            padding: 20px 30px;
+
+            .leftSec {
+                .neonEllipse {
+                    display: none;
+                }
+                .building {
+                    height: 300px;
+                }
+            }
+
+            .rightSec {
+                h2 {
+                    font-size: 27px;
+                    line-height: 44px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .aboutHeroSec {
+        .content {
+            border-radius: 20px;
+            padding: 20px 20px;
+
+            .leftSec {
+                .neonEllipse {
+                    display: none;
+                }
+                .building {
+                    height: 300px;
+                }
+            }
+
+            .rightSec {
+                h2 {
+                    font-size: 24px;
+                    line-height: 40px;
+                }
+            }
+        }
+    }
+}

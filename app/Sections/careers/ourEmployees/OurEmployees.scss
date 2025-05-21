@@ -1,0 +1,110 @@
+@use "../../../scss/main" as *;
+
+.ourEmployeesSec {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    min-height: 80dvh;
+    flex-wrap: wrap;
+
+    .leftSec {
+        max-width: 600px;
+        
+        h1 {
+            font-family: RacingSansOne;
+            font-size: 50px;
+            background: linear-gradient(90deg, #ffffff, #048dc3 );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 50px;
+        }
+
+        p {
+            font-family: Poppins-Regular;
+            font-size: 18px;      
+            letter-spacing: 1; ;
+        }
+
+        .achievments {
+            display: flex;
+            gap: 30px;
+            margin-top: 50px;
+
+            .peopleJoined {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                .text {
+                    h2 {
+                        background: linear-gradient(90deg, #ffffff, #048dc3 );
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        font-family: RacingSansOne;
+                        font-size: 34px;
+                    }
+                }
+            }
+            .projectsCompleted {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                
+                .text {
+                    h2 {
+                        background: linear-gradient(90deg, #ffffff, #048dc3 );
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        font-family: RacingSansOne;
+                        font-size: 34px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .ourEmployeesSec {
+        margin-block: 80px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .ourEmployeesSec {
+        .leftSec{
+            .achievments {
+                flex-wrap: wrap;
+            }
+        }
+
+        .rightSec {
+            img {
+                height: 300px;
+            }
+        }
+    }   
+}
+
+@media screen and (max-width: 425px) {
+    .ourEmployeesSec {
+        .leftSec {
+            h1 {
+                text-align: center;
+                line-height: 1;
+            }
+
+            p {
+                font-size: 16px;
+                text-align: center;
+            }
+        }
+
+        .rightSec {
+            img {
+                height: 200px;
+            }
+        }
+    }
+}

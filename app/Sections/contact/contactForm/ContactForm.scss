@@ -1,0 +1,282 @@
+@use "../../../scss/main" as *;
+
+.contactFormSec {
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 200px;
+    flex-wrap: wrap;
+
+    .leftSec {
+        h1 {
+            font-family: RacingSansOne;
+            background: linear-gradient(90deg, #ffffff, #17beff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 48px;
+            margin-bottom: 30px;
+        }
+
+        .contactInfo-contents {
+            height: 400px;
+            max-width: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 40px;
+            border-left: 2px solid #17beff;
+            padding-left: 40px;
+
+            .officeLocation {
+                display: flex;
+                align-items: start;
+                gap: 10px;
+
+                .content {
+                    font-family: Poppins-Regular;
+
+                    h3 {
+                        font-family: Poppins-Regular;
+                        background: linear-gradient(90deg, #ffffff, #17beff);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        font-size: 18px;
+                        letter-spacing: 1;
+                        margin-bottom: 8px;
+                    }
+
+                    p {
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .workingHours {
+                display: flex;
+                align-items: start;
+                gap: 10px;
+
+                .content {
+                    font-family: Poppins-Regular;
+
+                    h3 {
+                        font-family: Poppins-Regular;
+                        font-size: 18px;
+                        background: linear-gradient(90deg, #ffffff, #17beff);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        letter-spacing: 1;
+                        margin-bottom: 8px;
+                    }
+
+                    p {
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .communication {
+                display: flex;
+                align-items: start;
+                gap: 10px;
+
+                .content {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+
+                    h3 {
+                        font-family: Poppins-Regular;
+                        font-size: 18px;
+                        background: linear-gradient(90deg, #ffffff, #17beff);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        letter-spacing: 1;
+                    }
+
+                    .email-contact {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5px;
+                    }
+
+                    .email {
+                        display: flex;
+                        gap: 10px;
+                        align-items: center;
+                    }
+
+                    .contact {
+                        display: flex;
+                        gap: 10px;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+
+    .rightSec {
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(#ffffff, 0.067);
+        backdrop-filter: blur(100px);
+        padding: 20px 30px;
+        border-radius: 10px;
+
+        h1 {
+            font-size: 40px;
+            margin-bottom: 30px;
+            background: linear-gradient(90deg, #ffffff, #17beff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .contactForm {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+
+            .name-email {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 30px;
+
+                .name {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+
+                    label {
+                        font-family: Poppins-Regular;
+                        color: #fff;
+                    }
+
+                    input {
+                        padding: 10px 20px;
+                        border-radius: 10px;
+                        background: transparent;
+                        outline: none;
+                        border: 2px solid #68696a;
+                        color: #fff;
+                    }
+                }
+                .email {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+
+                    label {
+                        font-family: Poppins-Regular;
+                        color: #fff;
+                    }
+                    input {
+                        padding: 10px 20px;
+                        border-radius: 10px;
+                        background: transparent;
+                        outline: none;
+                        border: 2px solid #68696a;
+                        color: #fff;
+                    }
+                }
+            }
+
+            .mobileNumber {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                width: 100%;
+
+                label {
+                    font-family: Poppins-Regular;
+                    color: #fff;
+                }
+                input {
+                    padding: 10px 20px;
+                    border-radius: 10px;
+                    background: transparent;
+                    outline: none;
+                    border: 2px solid #68696a;
+                    color: #fff;
+                }
+            }
+
+            .message {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                width: 100%;
+
+                label {
+                    font-family: Poppins-Regular;
+                    color: #fff;
+                }
+                textarea {
+                    padding: 10px 20px;
+                    border-radius: 10px;
+                    background: transparent;
+                    outline: none;
+                    border: 2px solid #68696a;
+                    color: #fff;
+                }
+            }
+            .sndMsgBtn {
+                width: 100%;
+                padding: 10px 20px;
+                background-color: #17beff;
+                outline: none;
+                border: none;
+                border-radius: 10px;
+                color: #fff;
+                font-family: Poppins-Regular;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .contactFormSec {
+        margin-block: 100px;
+        gap: 100px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contactFormSec {
+        .rightSec {
+            padding-inline: 10px;
+            h1 {
+                font-size: 30px;
+            }
+            .contactForm {
+                .name-email {
+                    flex-wrap: wrap;
+                    .email {
+                        width: 100%;
+                    }
+                    .name {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .contactFormSec {
+        .rightSec {
+            .contactForm {
+                padding-inline: 15px;
+            }
+        }
+    }
+}

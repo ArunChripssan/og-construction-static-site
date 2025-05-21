@@ -1,0 +1,136 @@
+@use "../../../../scss/main" as *;
+
+.safetyPolicySec {
+    margin-block: 40px 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+    .contentWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+        flex-wrap: wrap;
+        gap: 50px;
+
+        .leftSec {
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+
+            .content {
+                display: flex;
+                align-items: start;
+                gap: 30px;
+
+                .bullet {
+                    font-size: 25px;
+                    background: linear-gradient(
+                        239.53deg,
+                        #17beff 18.52%,
+                        #0e7299 80.32%
+                    );
+                    padding: 2px 12px;
+                    border-radius: 50%;
+                }
+                p {
+                    font-family: Poppins-Regular;
+                    letter-spacing: 1;
+                }
+            }
+        }
+
+        .rightSec {
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+
+            .content {
+                display: flex;
+                align-items: start;
+                gap: 30px;
+
+                .bullet {
+                    font-size: 25px;
+                    background: linear-gradient(
+                        239.53deg,
+                        #17beff 18.52%,
+                        #0e7299 80.32%
+                    );
+                    padding: 2px 12px;
+                    border-radius: 50%;
+                }
+
+                p {
+                    font-family: Poppins-Regular;
+                    letter-spacing: 1;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1441px) {
+    .safetyPolicySec {
+        .contentWrapper {
+            .middleSec {
+                display: none;
+            }
+        }
+    }
+}
+@media screen and (min-width: 1441px) {
+    .safetyPolicySec {
+        .mobImgWrapper {
+            display: none;
+        }
+    }
+}
+@media screen and (max-width: 426px) {
+    .safetyPolicySec {
+        .title {
+            margin-block: 0;
+        }
+        .mobImgWrapper {
+            img {
+                width: 250px;
+                height: 250px;
+            }
+        }
+        .contentWrapper {
+            gap: 20px;
+            .leftSec {
+                gap: 20px;
+                padding-inline: 20px;
+                .content {
+                    .bullet {
+                        display: none;
+                    }
+                    p {
+                        font-size: 14px;
+                        text-align: center;
+                    }
+                }
+            }
+            .rightSec {
+                gap: 20px;
+                padding-inline: 20px;
+                .content {
+                    .bullet {
+                        display: none;
+                    }
+                    p {
+                        font-size: 14px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+

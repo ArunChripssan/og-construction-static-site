@@ -1,0 +1,49 @@
+@use "../../scss/main" as *;
+
+.no-before::before {
+    display: none;
+} 
+
+.projectsCompleted {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: end;
+    gap: 20px;
+}
+
+.experience {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: start;
+    gap: 20px;
+}
+
+.awards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: end;
+    gap: 20px;
+}
+
+.clients {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: start;
+    gap: 20px;
+}
+
+@media screen and (max-width: 426px) {
+    .separator {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .achievement-timeline {
+        display: none !important;
+    }
+}

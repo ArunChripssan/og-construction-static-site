@@ -1,0 +1,133 @@
+@use "../../../scss/main" as *;
+
+.homeBannerSec {
+    min-height: 100dvh;
+    overflow: hidden;
+
+    .bannerText {
+        position: absolute;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 80dvh;
+        text-align: center;
+        z-index: 10;
+
+        h1 {
+            font-family: RacingSansOne;
+            font-size: 70px;
+            color: #ffffff;
+            line-height: 70px;
+            letter-spacing: 2px;
+
+            span {
+                color: #17BEFF;
+            }
+        }
+        p {
+            font-family: Poppins-regular;
+            font-size: 20px;
+            line-height: 35px;
+            letter-spacing: 1;
+            padding-top: 20px;
+            max-width: 700px;
+        }
+        button {
+            font-family: RacingSansOne;
+            padding: 13px 30px;
+            margin-top: 20px;
+            border-radius: 40px;
+            border: 2px solid #17BEFF;
+            background: none;
+            color: #0f5976;
+            font-size: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    
+}
+
+@media screen and (max-width: 769px) {
+    .heroSec{
+        .bannerText {
+            min-height: 100dvh;
+            h1{
+                font-size: 60px;
+                line-height: 70px;
+            }
+        }
+        .bannerImg {
+            min-height: 100dvh;
+        }
+        .bannerSubImg {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .homeBannerSec{
+        .bannerText {
+            height: 100dvh;
+            h1{
+                font-size: 44px;
+                line-height: 50px;
+            }
+            p {
+                padding-inline: 20px;
+                font-size: 18px;
+                line-height: 28px;
+            }
+        }
+        .bannerImg {
+            min-height: 100dvh;
+        }
+    }
+    
+}
+
+
+@media screen and (max-width: 376px) {
+    .homeBannerSec{
+        .bannerText {
+
+            h1{
+                font-size: 40px;
+                line-height: 48px;
+            }
+            p {
+                font-size: 15px;
+                line-height: 25px;
+            }
+        }
+        .bannerImg {
+            min-height: 100dvh;
+        }
+    }
+}
+
+@media screen and (max-width: 322px) {
+    .homeBannerSec{
+        .bannerText {
+            h1{
+                font-size: 28px;
+                line-height: 35px;
+            }
+            p {
+                font-size: 14px;
+                line-height: 23px;
+                padding-top: 10px;
+            }
+        }
+        .bannerImg {
+            min-height: 100dvh;
+        }
+    }
+}
+
+

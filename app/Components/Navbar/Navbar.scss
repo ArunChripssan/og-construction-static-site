@@ -1,0 +1,110 @@
+@use "../../scss/main" as *;
+
+.nav {
+    position: fixed;
+    font-family: RacingSansOne;
+    width: 100%;
+    background-color: rgba(#33b9ed, 0.067);
+    backdrop-filter: blur(100px);
+    border-bottom: 1px solid #17beff;
+    z-index: 999;
+    display: block;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        height: 88px;
+
+        .logo {
+            width: 160px;
+            border-radius: 40px;
+            background-color: rgba(255, 255, 255, 0.665);
+            backdrop-filter: blur(100px);
+        }
+
+        .nav-list {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            .nav-item {
+                margin: 0 18px;
+                position: relative;
+                list-style: none;
+                color: #fff;
+
+                &:hover {
+                    z-index: 99;
+                }
+            }
+
+            .dropDownItem {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                cursor: pointer;
+
+            }
+            .nav-link {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+            }
+        }
+
+        .contact {
+            font-family: RacingSansOne;
+            font-size: 16px;
+            padding: 10px 20px;
+            border: 2px solid #17beff;
+            border-radius: 40px;
+            background: transparent;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.5s ease;
+
+            &:hover {
+                background-color: #17beff;
+            }
+        }
+        .ham-menu {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .nav {
+        .container {
+            gap: 30px;
+
+            .logo {
+                width: 140px;
+            }
+
+            .nav-list {
+                gap: 22px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .nav {
+        display: none;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 1025px) {
+    .nav {
+        .container {
+            .nav-list {
+                gap: 30px;
+            }
+
+            .contact {
+            }
+        }
+    }
+}

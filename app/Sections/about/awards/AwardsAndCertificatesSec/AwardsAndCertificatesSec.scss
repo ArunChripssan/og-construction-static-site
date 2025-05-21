@@ -1,0 +1,91 @@
+.awardsAndCertificatesSec {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-bottom: 80px;
+
+    .title {
+        font-family: RacingSansOne;
+        margin-bottom: 2rem;
+        letter-spacing: 1px;
+        font-size: 50px;
+        background: linear-gradient(90deg, #ffffff, #048dc3 );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: center;
+        margin-top: 80px;
+    }
+
+    .grid-awards {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+        
+        .card {
+            position: relative;
+            
+            
+            .caption {
+                background-color: rgba(0, 2, 3, 0.7);
+                position: absolute;
+                bottom: 0;
+                text-align: center;
+                width: 100%;
+                padding-block: 10px;
+                font-family: Poppins-Regular;
+                letter-spacing: 1;
+            }
+        }
+    }
+
+    .grid-verticalCertificates {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+
+        .leftSec {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .rightSec {
+            justify-content: center;
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+    }
+
+    .grid-horixontalCertificates {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+
+        .leftSec {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .rightSec {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .grid-awards {
+        img {
+            object-fit: contain;
+            height: 250px;
+        }
+        .caption {
+        }
+    }
+}

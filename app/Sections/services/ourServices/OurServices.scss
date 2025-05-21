@@ -1,0 +1,120 @@
+@use "../../../scss/main" as *;
+
+.ourServicesSec {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    gap: 50px;
+    flex-wrap: wrap;
+
+    .leftSec {
+        max-width: 400px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .title {
+            background: linear-gradient(90deg, #ffffff, #048dc3 );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        h1 {
+            font-family: RacingSansOne;
+            letter-spacing: 1.5;
+            font-size: 45px;
+        }
+
+        p {
+            font-family: Poppins-Regular;
+            max-width: 300px;
+            font-size: 20px;
+        }
+
+        button {
+            outline: none;
+            background-color: #0A1549;
+            padding: 12px 30px;
+            border-radius: 50px;
+            border: 1px solid #17BEFF;
+            color: #17BEFF;
+            font-size: 18px;
+        }
+    }
+
+    .rightSec {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        flex-wrap: wrap;
+
+        .card {
+            width: 280px;
+            height: 290px;
+            background: linear-gradient(to bottom left, #002d4f, #586f87);
+            display: flex;
+            flex-direction: column; 
+            justify-content: center;
+            gap: 10px;
+            padding: 0 20px;
+            border-radius: 10px;
+
+            h3 {
+                font-family: RacingSansOne;
+                letter-spacing: 1.8;
+                font-size: 20px;
+                line-height: 25px;
+            }
+
+            p {
+                font-family: Poppins-Regular;
+            }
+
+            .icon {
+                width: 75px;
+                height: 75px;
+                background: linear-gradient(to bottom, #0a8ec2, #055b7d);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                
+                img {
+                    position: relative;
+                    &::before {
+                        position: absolute;
+                        inset: 0;
+                        content: "";
+                        width: 100px;
+                        height: 100px;
+                        background: linear-gradient(45deg, #074a65, #17BEFF );
+                    }
+                }
+            }
+        }
+
+        .leftCard {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .rightCard {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-top: 50px;
+        }
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .ourServicesSec {
+        .rightSec {
+            .rightCard {
+                margin-top: 0;
+            }
+        }
+    }
+}

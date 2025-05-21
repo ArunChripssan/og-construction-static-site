@@ -1,0 +1,163 @@
+@use "../../../../scss/main" as *;
+
+.meetOurHeadsSec {
+    margin-block: 100px;
+    
+    .imageWrapper {
+        .building-bg {
+            position:  relative !important;
+            opacity: 0.6;
+        }
+    }
+
+    .container {
+        width: 100%;
+        top: 0;
+
+        .title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 60px;
+
+            h1 {
+                font-family: RacingSansOne;
+                letter-spacing: 1.2;
+                font-size: 55px;
+                background: linear-gradient(90deg, #17BEFF 0%, #FCFFFF 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            h2 {
+                font-size: 45px;
+            }
+        }
+        .cardSec {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            margin-top: 60px;
+
+            .card {
+                position: relative;
+                background: #4D4B4B5C;
+                width: 450px;
+                height: 525px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: end ;
+                border-radius: 10px;
+
+                .neonEllipse {
+                    position: absolute;
+                    z-index: -1;
+                }
+
+                .name {
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    text-align: center;
+                    background: #000000B8;
+                    margin-inline: auto;
+                    padding-block: 20px;
+                    border-radius: 10px;
+
+                    h2 {
+                        font-family: RacingSansOne;
+                        font-size: 30px;
+                        letter-spacing: 1;
+                        background: linear-gradient(90deg, #17BEFF 0%, #FCFFFF 100%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                    p {
+                        font-family: Poppins-Regular;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .meetOurHeadsSec {
+        .container {
+            .cardSec {
+                gap: 50px;
+                justify-content: center;
+                .card {
+                    width: 400px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .meetOurHeadsSec {
+        .container {
+            .cardSec {
+                gap: 50px;
+                justify-content: center;
+                .card {
+                    width: 420px;
+                    height: 450px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and  (max-width: 426px) {
+    .meetOurHeadsSec {
+        .container {
+            .title {
+                h1 {
+                    font-size: 45px;
+                }
+                h2 {
+                    font-size: 30px;
+                }
+            }
+
+            .cardSec {
+                .card {
+                    .neonEllipse {
+                        height: 500px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and  (max-width: 376px) {
+    .meetOurHeadsSec {
+        .container {
+            .title {
+                h1 {
+                    font-size: 40px;
+                }
+                h2 {
+                    font-size: 25px;
+                }
+            }
+
+            .cardSec {
+                .card {
+                    .neonEllipse {
+                        height: 500px;
+                    }
+                    .name {
+                        h2 {
+                            font-size: 26px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

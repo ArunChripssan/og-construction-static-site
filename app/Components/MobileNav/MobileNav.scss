@@ -1,0 +1,131 @@
+@use "../../scss/main" as *;
+
+.mobileNav {
+    position: fixed;
+    font-family: RacingSansOne;
+    width: 100%;
+    background-color: rgba(#33b9ed, 0.067);
+    backdrop-filter: blur(100px);
+    border-bottom: 1px solid #17beff;
+    z-index: 999;
+    display: block;
+
+    .navContainer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 80px;
+        height: 88px;
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            z-index: 1001;
+
+            span {
+                height: 3px;
+                width: 30px;
+                background-color: #17beff;
+                margin: 3px 0;
+                border-radius: 4px;
+                transition: all 0.3s ease;
+            }
+
+            &.open span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            &.open span:nth-child(2) {
+                opacity: 0;
+            }
+
+            &.open span:nth-child(3) {
+                transform: rotate(-45deg) translate(8px, -8px);
+            }
+        }
+        .menu {
+            position: absolute;
+            top: 80;
+            left: 0;
+            width: 100%;
+            margin-top: 9px;
+
+            .menu-items {
+                background-color: #0a3a4efe;
+                backdrop-filter: blur(100px);
+                color: #fff;
+                transition: all 0.3s ease;
+
+                .nav-list {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 20px;
+                    text-align: center;
+                }
+
+                .nav-item {
+                    list-style: none;
+
+                    .nav-link {
+                        
+                    }
+                }
+
+                .about {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 5px;
+                }
+
+                .subMenuOpen {
+                    background-color: #065f73;
+                }
+
+                .projects {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 5px;
+                }
+
+                .submenu {
+                    background-color: #065f73;
+                    width: 100vw;
+                    list-style: none;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    padding-block: 10px;
+
+                    &a {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .mobileNav {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .mobileNav {
+        .navContainer {
+            .hamburger {
+                display: flex;
+            }
+        }
+    }
+}

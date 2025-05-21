@@ -1,0 +1,62 @@
+@use "../../../scss/main" as *;
+
+
+.testimonials {
+    margin-top: 40px;
+    &__container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    
+    .card {
+        max-width: 300px;
+        background-color: #BFC2C545;
+        padding: 30px;
+        border-radius: 10px;
+        backdrop-filter: blur(100px);
+        margin-bottom: 200px;
+        margin-top: 80px;
+
+        .ratings {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            font-family: Poppins;
+        }
+
+        .review {
+            margin-top: 30px;
+            font-family: Poppins-regular;
+            letter-spacing: 0.5;
+        }
+
+        .reviwer-detail {
+            margin-top: 60px;
+            padding-top: 25px;
+            border-top: 2px solid #fff;
+        }
+    }
+    .neon-ellipse {
+        position: absolute;
+        right: -100px;
+        opacity: 0.4;
+        width: 700px;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .testimonials {
+        .card {
+            margin-block: 0px 80px;
+        }
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .testimonials {
+        .title {
+            margin-bottom: 40px;
+        }
+    }
+}

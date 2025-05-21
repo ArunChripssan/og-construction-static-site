@@ -1,0 +1,47 @@
+@use "../../scss/main" as *;
+
+.slider-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+
+    .slick-track {
+        display: flex;
+        align-items: center;
+    }
+
+    .slick-active {
+        img {
+            height: 220px;
+            transition: all 0.3s ease;
+        }
+    }
+    .slick-center {
+        img {
+            transition: all 0.3s ease;
+            height: 250px;
+        }
+    }
+}
+
+@media screen and (max-width: 1441px) {
+    .slider-container {
+        bottom: 70px;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .slider-container {
+        bottom: 25px;
+    }
+}
+
+@media screen and (max-width: 765px) {
+    .slider-container {
+        display: none;
+    }
+}

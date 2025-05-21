@@ -1,0 +1,130 @@
+@use "../../../scss/main" as *;
+
+.serviceContactUsSec {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    flex-wrap: wrap;
+    margin-block: 130px;
+
+    .leftSec {
+        min-width: 350px;
+        min-height: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        justify-content: center;
+        background: linear-gradient(to bottom, #0d4f69ba, #052b3aad);
+        border-radius: 18px;
+
+        h2 {
+            font-family: RacingSansOne;
+            font-size: 30px;
+            letter-spacing: 1;
+            background: linear-gradient(to left, #ffffff, #12bcff );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .email {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            p {
+                font-size: 24px;
+            }
+        }
+        
+        .contact {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            
+            p {
+                font-size: 24px;
+            }
+        }
+
+        button {
+            background-color: #17BEFF;
+            border: none;
+            padding: 15px 60px;
+            border-radius: 30px;
+            font-family: Poppins-SemiBold;
+            font-size: 20px;
+            color: #ffffff;
+        }
+    }
+
+    .rightSec {
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 40px;
+        .topSec {
+            h1 {
+                font-family: RacingSansOne;
+                font-size: 40px;
+                letter-spacing: 1;
+                background: linear-gradient(to left, #ffffff, #12bcff );
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                margin-bottom: 30px;
+            }
+            .content {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                .text {
+                    display: flex;
+                    gap: 30px;
+                }
+                
+                p {
+                    font-family: Poppins-Regular;
+                    letter-spacing: 1;
+                }
+            }
+        }
+
+        .bottomSec {
+            display: flex;
+            gap: 20px;
+            flex: 1;
+            flex-wrap: wrap;
+            background: linear-gradient(to bottom, #126f94ba, #052b3aad);
+            padding: 30px;
+            border-radius: 20px;
+
+            .bottomSecContent {
+                min-width: 250px;
+                display: flex;
+                align-items: center;
+                gap: 20px;
+
+                p {
+                    font-family: Poppins-Regular;
+                    letter-spacing: 1;
+                }
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .serviceContactUsSec {
+        .rightSec {
+            .topSec {
+
+                h1 {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,79 @@
+@use "../../../../scss/main" as *;
+
+.onGoingProjectCardSec {
+    margin-block: 80px;
+
+    .categorySec {
+        .category {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            padding-inline: 60px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid rgb(96, 95, 95);
+
+            &__item {
+                list-style: none;
+                color: #fff;
+                font-family: Poppins-Regular;
+                letter-spacing: 1.4;
+                font-size: 26px;
+                font-weight: bold;
+                padding-inline: 50px;
+                cursor: pointer;
+                background-color: rgb(96, 95, 95);
+                transition: all 0.3s ease-in-out;
+
+                &__active {
+                    color: #ffffff;
+                    background-color: #17beff;
+                }
+            }
+        }
+    }
+
+    .mobileCategorySec {
+        display: flex;
+        justify-content: end;
+        padding-top: 10px;
+        border-top: 2px solid #17beff;
+        display: none;
+    }
+
+    .cardSec {
+        margin-block: 60px;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .onGoingProjectCardSec {
+        .cardSec {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media screen and (max-width: 1439px) {
+    .onGoingProjectCardSec {
+        .categorySec {
+            display: none;
+        }
+
+        .mobileCategorySec {
+            display: flex;
+        }
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .onGoingProjectCardSec {
+        .cardSec {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}

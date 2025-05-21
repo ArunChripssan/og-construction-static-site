@@ -1,0 +1,99 @@
+@use "../../../scss/main" as *;
+
+.constructionServiceSec {
+    margin-block: 80px;
+    background-color: #4d4b4b69;
+    padding-block: 80px;
+
+    .content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 100px;
+        position: relative;
+        flex-wrap: wrap;
+
+        .leftSec {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 600px;
+
+            h1 {
+                font-family: RacingSansOne;
+                letter-spacing: 1.5;
+                line-height: 1.3;
+                font-size: 45px;
+                background: linear-gradient(90deg, #048dc3, #ffffff);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            .desc {
+                display: flex;
+                gap: 30px;
+
+                p {
+                    font-family: Poppins-regular;
+                    font-size: 18px;
+                    line-height: 30px;
+                    letter-spacing: 1;
+                }
+            }
+        }
+
+        .rightSec {
+
+            .neonEllipse {
+                position: absolute;
+                top: 0;
+                z-index: -1;
+                transform: translate(-170px, -120px);
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .constructionServiceSec {
+        .content {
+            .leftSec {
+                order: 2;
+            }
+            .rightSec {
+                order: 1;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .constructionServiceSec {
+        .content {
+            .leftSec {
+                h1 {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .constructionServiceSec {
+        .content {
+            .leftSec {
+                h1 {
+                    font-size: 35px;
+                    text-align: center;
+                }
+            }
+
+            .rightSec {
+                img {
+                    height: 400px;
+                }
+            }
+        }
+    }
+}

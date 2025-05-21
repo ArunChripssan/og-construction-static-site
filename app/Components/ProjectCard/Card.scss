@@ -1,0 +1,30 @@
+@use "../../scss/main" as *;
+
+.projectCard {
+    position: relative !important;
+    height: 250px; 
+    overflow: hidden;
+
+    .overlay {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 10px 16px;
+        background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+        color: white;
+        text-align: center;
+    
+
+        h2 {
+            font-family: Poppins-Regular;
+            font-size: 16px;
+            letter-spacing: 1;
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .projectCard {
+        height: 220px;
+    }
+}

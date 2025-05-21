@@ -1,0 +1,85 @@
+@use "../../../scss/main" as *;
+
+.whyOasisSec {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180.3deg, rgba(23, 190, 255, 0.25) 10.75%, rgba(10, 80, 107, 0.25) 81.75%);
+    min-height: 60dvh;
+    margin-bottom: 80px;
+    padding-block: 50px;
+
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 80px;
+        flex-wrap: wrap;
+
+        .rightSec {
+            max-width: 600px;
+
+            h1 {
+                font-family: RacingSansOne;
+                font-size: 50px;
+                background: linear-gradient(90deg, #FFFFFF 0%, #17BEFF 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                margin-bottom: 20px;
+
+
+            }
+
+            .content {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                font-size: 20px;
+                font-family: Poppins-Regular;
+                font-size: 18px;      
+                letter-spacing: 1; 
+
+                .text {
+                    display: flex;
+                    gap: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .whyOasisSec {
+        .leftSec {
+            img {
+                height: 400px;
+            }
+        }
+    }   
+}
+
+@media screen and (max-width: 425px) {
+    .whyOasisSec {
+        .container{
+            gap: 40px;
+            .leftSec {
+                img {
+                    height: 300px;
+                }
+            }
+
+            .rightSec {
+                h1 {
+                    font-size: 35px;
+                }
+                .content {
+                    .text {
+                        p {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

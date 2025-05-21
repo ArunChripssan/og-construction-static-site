@@ -1,0 +1,55 @@
+@use "../../../scss/main" as *;
+
+.achievementSec {
+    position: relative;
+    margin-top: 80px;
+    display: flex;
+
+
+    .buildingBg {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        opacity: 1;
+    }
+
+    .contents {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        position: relative;
+        max-width: 700px;
+
+        h1 {
+            font-family: RacingSansOne;
+            color: #17BEFF;
+            font-size: 45px;
+        }
+
+        h2 {
+            font-family: Poppins-SemiBold;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .achievementSec {
+        .container {
+            .achievement-timeline {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .achievementSec {
+        .title {
+            margin-bottom: 60px;
+            font-size: 43px;
+        }
+        .building-bg {
+            display: none;
+        }
+    }
+}

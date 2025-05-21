@@ -1,0 +1,112 @@
+@use "../../../scss/main" as *;
+
+    
+.experinceSec {
+    display: flex;
+    justify-content: center;
+    margin-block: 120px;
+
+    .title {
+        margin-bottom: 20px;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        position: relative;
+
+        .rightSec {
+            .neonEllipse {
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                right: 0;
+                transform: translate(80px, -90px);
+            }
+        }
+        
+        .leftSec{
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            
+            .contents {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                text-align: start;
+                
+                p {
+                    font-family: Poppins-regular;
+                    font-size: 18px;
+                    line-height: 30px;
+                    letter-spacing: 1;
+                }
+            }
+        }
+    }
+}   
+
+@media screen and (max-width: 1441px) {
+    .experinceSec {
+        .container {
+            .leftSec {
+                max-width: 650px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .experinceSec{
+        .container {
+            .leftSec {
+                order: 2;
+            }
+            .rightSec {
+                order: 1;
+                .neonEllipse {
+                    transform: translate(10px, -90px);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .experinceSec {
+        margin-top: 20px;
+        .title {
+            font-size: 33px;
+        }
+        .container {
+            .rightSec {
+                img {
+                    height: 350px;
+                }
+            }
+
+            .leftSec {
+                .contents {
+                    img {
+                        display: none;
+                    }
+                    p {
+                        font-size: 16px;
+                        line-height: 27px;
+                        text-align: center;
+                    }
+                }
+            }
+            .rightSec {
+                order: 1;
+                .neonEllipse {
+                    transform: translate(10px, -45px);
+                }
+            }
+        }
+    }
+}

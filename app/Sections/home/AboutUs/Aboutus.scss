@@ -1,0 +1,169 @@
+@use "../../../scss/main" as *;
+
+.about-usSec {
+    position: relative;
+    margin-top: 60px;
+
+    .title {
+        margin-block: 80px 40px;
+    }
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        transition: all 3s ease-in;
+        position: relative;
+
+        .leftSec {
+            display: flex;
+            justify-content: center;
+            .neonEllipse {
+                position: absolute;
+                z-index: -1;
+                inset: 0;
+                transform: translate(-120px, -60px);
+            }
+
+            .content {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 30px;
+                padding: 10px;
+                background-color: #057cab;
+                width: 350px;
+                position: absolute;
+                bottom: 0;
+
+                .icon {
+                    background-color: #ffffff;
+                    padding: 10px;
+                    border-radius: 50%;
+                }
+
+                .text {
+                    h1 {
+                        font-family: RacingSansOne;
+                        font-size: 50px;
+                    }
+                    p {
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+
+        .rightSec {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            max-width: 680px;
+
+            .aboutus-desc {
+                display: flex;
+                align-items: start;
+                justify-content: center;
+                gap: 20px;
+
+                img {
+                    width: 24px;
+                }
+
+                &__content {
+                    font-family: Poppins-regular;
+                    font-size: 20px;
+                    line-height: 30px;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1441px) {
+    .about-usSec {
+        .container {
+            .rightSec {
+                max-width: 600px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .about-usSec {
+        .container {
+            .leftSec {
+                position: relative;
+            }
+
+            .rightSec {
+                max-width: 650px;
+
+                .title {
+                    margin-block: 40px 20px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .about-usSec {
+        .container {
+            .leftSec {
+                .aboutUsImg {
+                    height: 400px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .about-usSec {
+        .container {
+            .leftSec {
+                .aboutUsImg {
+                    height: 300px;
+                }
+                .neonEllipse {
+                    display: none;
+                }
+                .content {
+                    width: 230px;
+                    gap: 20px;
+                    .text {
+                        h1 {
+                            font-size: 33px;
+                        }
+                        p {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+
+            .rightSec {
+                .title {
+                    margin-block: 0px 0px;
+                    font-size: 35px;
+                }
+                .aboutus-desc {
+                    &__content {
+                        font-size: 16px;
+                        line-height: 27px;
+                        text-align: center;
+                    }
+                    img {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

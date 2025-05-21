@@ -1,0 +1,77 @@
+@use "../../../scss/main.scss" as *;
+
+.specializedSec {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .title {
+        font-family: RacingSansOne;
+        font-size: 45px;
+        background: linear-gradient(90deg, #048dc3, #ffffff );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: center;
+        line-height: 50px;
+        margin-bottom: 40px;
+    }
+
+    .cardSec {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        padding: 2rem;
+        gap: 28px;
+        padding: 40px;
+        
+        .card {
+            width: 180px;
+            height: 180px;
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            text-align: center;
+            border: 2px solid #048dc3;
+            background-clip: padding-box, border-box;
+            background-origin: border-box;
+            backdrop-filter: blur(30px);
+            background-image: linear-gradient(135deg, #28516b, #dfdfdf27);
+        
+            .icon {
+                margin-bottom: 20px;    
+            }
+        
+            .heading {
+                font-size: 18px;
+                font-weight: 600;
+                color: #c0c4cc;
+                
+                h2 {
+                    font-family: Poppins-SemiBold;
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .specializedSec {
+        .cardSec {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .specializedSec {
+        .cardSec {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}

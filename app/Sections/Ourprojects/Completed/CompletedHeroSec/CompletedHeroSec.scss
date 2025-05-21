@@ -1,0 +1,123 @@
+@use "../../../../scss/main" as *;
+
+.completedHeroSec {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    padding: 50px;
+    flex-wrap: wrap;
+    
+    .container {
+        display: flex;
+        justify-content: center;
+        background-color: rgb(255, 255, 255, 0.2);
+        backdrop-filter: blur(100px);
+        width: 700px;
+        padding-block: 50px;
+
+        
+        .contents {
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 25px;
+
+            .title {
+                font-family: RacingSansOne;
+                font-size: 45px;
+                letter-spacing: 1;
+                background: linear-gradient(90deg, #3dbef1, #ffffff);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .text {
+                display: flex;
+                gap: 20px;
+                font-family: Poppins-Regular;
+                letter-spacing: 0.7;
+                line-height: 28px;
+            }
+        }
+        
+    }
+    .subDiv {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 50px;
+        background: linear-gradient(#085776, #149fd5);
+    }
+}
+
+@media screen and (max-width: 1441px) {
+    .completedHeroSec{
+        .container{
+            width: 650px;
+        }
+
+        .subDiv {
+            width: 350px;
+            img {
+                height: 280;
+            }
+        }
+    }
+    
+}
+
+@media screen and (max-width: 1439px) {
+    .completedHeroSec{
+        .container{
+            background-color: transparent;
+            padding: 0;
+
+            .contents {
+
+                .title {
+                    text-align: center;
+                }
+            }
+        }
+
+        .subDiv {
+            width: 100%;
+            background: transparent;
+            img {
+                height: 400;
+                width: 800;
+            }
+        }
+    }
+    
+}
+
+@media screen and (max-width: 426px) {
+    .completedHeroSec {
+        margin-top: 80px;
+        padding: 0;
+        .container {
+            background-color: transparent;
+
+            .contents {
+                .title {
+                    font-size: 40px;
+                    margin-block: 30px;
+                }
+                .text {
+                    font-size: 14px;
+                }
+            }
+        }
+        .subDiv {
+            background: transparent;
+            padding: 0;
+
+            img {
+                width: 400px;
+                height: 250px;
+            }
+        }
+    }
+}

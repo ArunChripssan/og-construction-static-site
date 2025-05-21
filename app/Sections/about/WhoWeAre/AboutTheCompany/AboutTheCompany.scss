@@ -1,0 +1,138 @@
+@use "../../../../scss/main" as *;
+
+.aboutTheCompanySec {
+    background: linear-gradient(
+        259.27deg,
+        rgba(23, 190, 255, 0.18) 28.33%,
+        rgba(27, 101, 130, 0.1836) 68.65%
+    );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding-block: 60px;
+    margin-top: 80px;
+    position: relative;
+
+    p {
+        font-family: Poppins-Regular;
+        line-height: 1.6;
+        letter-spacing: 1;
+    }
+
+    .title {
+        margin-bottom: 60px;
+    }
+
+    .mobViewTopSec {
+        position: relative;
+        display: none;
+
+        .neonEllipse {
+            position: absolute;
+            top: 0;
+            z-index: -1;
+        }
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        .leftSec {
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+
+            h1 {
+                font-family: RacingSansOne;
+                font-size: 45px;
+                background: linear-gradient(90deg, #17beff 0%, #fcffff 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+
+        .middleSec {
+            display: block;
+            .neonEllipse {
+                position: absolute;
+                top: 0;
+                z-index: -1;
+                transform: translate(-200px);
+            }
+        }
+
+        .rightSec {
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+}
+@media screen and (max-width: 1441px) {
+    .aboutTheCompanySec {
+        flex-wrap: wrap;
+
+        .mobViewTopSec {
+            display: block;
+        }
+        .container {
+            align-items: flex-start;
+            column-gap: 30px;
+            margin-top: 40px;
+            .middleSec {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .aboutTheCompanySec {
+       
+        .container {
+            align-items: center;
+            justify-content: center;
+            column-gap: 30px;
+            margin-top: 40px;
+            .middleSec {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .aboutTheCompanySec {
+        .mobViewTopSec {
+            img {
+                height: 300px;
+                width: 350px;
+            }
+        }
+        .container {
+            row-gap: 30px;
+            .leftSec {
+                padding-inline: 20px;
+                font-size: 15px;
+            }
+            .rightSec {
+                padding-inline: 20px;
+                font-size: 15px;
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .aboutTheCompanySec {
+        .title {
+            margin-block: 0;
+        }
+    }
+}
