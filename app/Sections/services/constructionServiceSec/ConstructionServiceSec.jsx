@@ -35,7 +35,7 @@ const ConstructionServiceSec = () => {
                         />
                         <Image
                             className="neonEllipse"
-                            src="/assets/ellipse.png"
+                            src="/assets/Ellipse.png"
                             alt=""
                             width={850}
                             height={750}

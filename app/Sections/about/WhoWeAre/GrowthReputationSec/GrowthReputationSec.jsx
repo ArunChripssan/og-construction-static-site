@@ -34,7 +34,7 @@ const GrowthReputationSec = () => {
                     />
                     <Image
                         className="neonEllipse"
-                        src="/assets/ellipse.png"
+                        src="/assets/Ellipse.png"
                         alt=""
                         width={800}
                         height={700}

@@ -31,7 +31,7 @@ const Experience = () => {
                         />
                         <Image
                             className="neonEllipse"
-                            src="/assets/ellipse.png"
+                            src="/assets/Ellipse.png"
                             alt=""
                             width={700}
                             height={800}

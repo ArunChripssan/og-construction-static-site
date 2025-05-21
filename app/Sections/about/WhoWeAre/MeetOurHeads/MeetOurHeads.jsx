@@ -30,7 +30,7 @@ const MeetOurHeads = () => {
                             />
                             <Image
                                 className="neonEllipse"
-                                src="/assets/ellipse.png"
+                                src="/assets/Ellipse.png"
                                 alt=""
                                 width={1000}
                                 height={600}
@@ -43,7 +43,7 @@ const MeetOurHeads = () => {
                         <div className="card">
                             <Image
                                 className="neonEllipse"
-                                src="/assets/ellipse.png"
+                                src="/assets/Ellipse.png"
                                 alt=""
                                 width={1000}
                                 height={600}
