@@ -3,10 +3,12 @@ import DiplomaticAndMinistries from "../Sections/ourClients/diplomaticAndMinistr
 import PrivateCompanies from "../Sections/ourClients/privateCompanies/PrivateCompanies";
 import OurConsultant from "../Sections/ourClients/ourConsultant/OurConsultant";
 import Clients from "../Sections/ourClients/Clients/Clients";
+import OurClientsBanner from "../Sections/ourClients/OurClientsBanner/OurClientsBanner";
 
 const OurClients = () => {
   return (
-    <>
+    <>  
+        <OurClientsBanner/>
         <DiplomaticAndMinistries/>
         <PrivateCompanies/>
         <OurConsultant/>
