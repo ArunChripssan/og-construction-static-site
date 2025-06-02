@@ -8,6 +8,13 @@ const Aboutus = () => {
         <div className="wrapper">
             <div className="about-usSec">
                 <div className="container">
+                    <Image
+                            className="neonEllipse"
+                            src="/assets/ellipse.png"
+                            alt=""
+                            width={900}
+                            height={700}
+                        />
                     <div className="leftSec">
                         <Image
                             className="aboutUsImg"
@@ -16,13 +23,7 @@ const Aboutus = () => {
                             width={520}
                             height={500}
                         />
-                        <Image
-                            className="neonEllipse"
-                            src="/assets/Ellipse.png"
-                            alt=""
-                            width={900}
-                            height={700}
-                        />
+                        
                         <div className="content">
                             <div className="icon">
                                 <Image

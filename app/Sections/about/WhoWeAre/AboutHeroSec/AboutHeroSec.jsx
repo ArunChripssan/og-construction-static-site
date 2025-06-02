@@ -18,7 +18,7 @@ const AboutHeroSec = () => {
                         />
                         <Image
                             className="neonEllipse"
-                            src="/assets/Ellipse.png"
+                            src="/assets/ellipse.png"
                             alt=""
                             width={900}
                             height={700}

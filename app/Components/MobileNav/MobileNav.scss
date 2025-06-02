@@ -8,7 +8,7 @@
     backdrop-filter: blur(100px);
     border-bottom: 1px solid #17beff;
     z-index: 999;
-    display: block;
+    display: none;
 
     .navContainer {
         display: flex;
@@ -16,6 +16,12 @@
         justify-content: space-between;
         gap: 80px;
         height: 88px;
+
+        .logo {
+            border-radius: 40px;
+            background-color: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(100px);
+        }
 
         .hamburger {
             display: none;
@@ -111,18 +117,9 @@
     }
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (max-width: 1440px) {
     .mobileNav {
-        display: none;
-    }
-
-    .hamburger {
-        display: flex;
-    }
-}
-
-@media screen and (max-width: 769px) {
-    .mobileNav {
+        display: block;
         .navContainer {
             .hamburger {
                 display: flex;

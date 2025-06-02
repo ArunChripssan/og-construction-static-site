@@ -112,6 +112,12 @@
 @media screen and (max-width: 426px) {
     .ourServicesSec {
         .rightSec {
+            gap: 30px;
+            .card {
+                h3 {
+                    font-size: 25px;
+                }
+            }
             .rightCard {
                 margin-top: 0;
             }

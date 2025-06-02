@@ -8,7 +8,7 @@ const Banner = () => {
             <div className="bannerImgSec">
                 <span className="overlay"></span>
                 <Image 
-                    src="/assets/carousel/img2.jpg" 
+                    src="/assets/Carousel/img2.jpg" 
                     alt="" 
                     fill
                     style={{objectFit: 'cover'}}

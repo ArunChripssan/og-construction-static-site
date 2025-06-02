@@ -15,7 +15,7 @@ const AboutTheCompany = () => {
                 />
                 <Image
                     className="neonEllipse"
-                    src="/assets/Ellipse.png"
+                    src="/assets/ellipse.png"
                     alt=""
                     width={700}
                     height={700}
@@ -51,7 +51,7 @@ const AboutTheCompany = () => {
                     />
                     <Image
                         className="neonEllipse"
-                        src="/assets/Ellipse.png"
+                        src="/assets/ellipse.png"
                         alt=""
                         width={1000}
                         height={700}

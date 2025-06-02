@@ -75,6 +75,12 @@
     }
 }
 
+@media screen and (max-width: 1440px) {
+    .nav {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 1025px) {
     .nav {
         .container {
@@ -91,19 +97,12 @@
     }
 }
 
-@media screen and (max-width: 769px) {
-    .nav {
-        display: none;
-    }
-}
+
 @media screen and (min-width: 769px) and (max-width: 1025px) {
     .nav {
         .container {
             .nav-list {
                 gap: 30px;
-            }
-
-            .contact {
             }
         }
     }

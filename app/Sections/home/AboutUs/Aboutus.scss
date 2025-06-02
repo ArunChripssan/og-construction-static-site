@@ -2,10 +2,9 @@
 
 .about-usSec {
     position: relative;
-    margin-top: 60px;
+    margin-top: 80px;
 
     .title {
-        margin-block: 80px 40px;
     }
     .container {
         display: flex;
@@ -16,15 +15,18 @@
         transition: all 3s ease-in;
         position: relative;
 
+        .neonEllipse {
+            position: absolute;
+            z-index: -1;
+            inset: 0;
+            transform: translate(-170px, -60px);
+        }
+
         .leftSec {
             display: flex;
             justify-content: center;
-            .neonEllipse {
-                position: absolute;
-                z-index: -1;
-                inset: 0;
-                transform: translate(-120px, -60px);
-            }
+            position: relative;
+            top: 0;
 
             .content {
                 display: flex;
@@ -89,6 +91,16 @@
         .container {
             .rightSec {
                 max-width: 600px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1220px) {
+    .about-usSec {
+        .container {
+            .neonEllipse{
+                transform: translate(20px, -60px);
             }
         }
     }

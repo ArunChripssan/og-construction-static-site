@@ -19,6 +19,7 @@ const MobileNav = () => {
                 <div className="wrapper">
                     <div className="navContainer">
                         <Image
+                            className="logo"
                             src="/assets/logo.png"
                             alt=""
                             width={180}

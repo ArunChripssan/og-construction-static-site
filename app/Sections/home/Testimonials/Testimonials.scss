@@ -2,11 +2,17 @@
 
 
 .testimonials {
-    margin-top: 40px;
+    margin-block: 80px;
+
+    .title {
+        margin-bottom: 60px;
+    }
+
     &__container {
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         flex-wrap: wrap;
+        gap: 50px;
     }
     
     .card {
@@ -15,8 +21,6 @@
         padding: 30px;
         border-radius: 10px;
         backdrop-filter: blur(100px);
-        margin-bottom: 200px;
-        margin-top: 80px;
 
         .ratings {
             display: flex;
@@ -42,21 +46,5 @@
         right: -100px;
         opacity: 0.4;
         width: 700px;
-    }
-}
-
-@media screen and (max-width: 769px) {
-    .testimonials {
-        .card {
-            margin-block: 0px 80px;
-        }
-    }
-}
-
-@media screen and (max-width: 426px) {
-    .testimonials {
-        .title {
-            margin-bottom: 40px;
-        }
     }
 }

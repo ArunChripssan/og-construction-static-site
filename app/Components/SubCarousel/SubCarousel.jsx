@@ -34,6 +34,13 @@ const SubCarousel = () => {
               },
             },
             {
+              breakpoint: 1220,
+              settings: {
+                slidesToShow: 1,
+                centerPadding: "400px",
+              },
+            },
+            {
               breakpoint: 1025,
               settings: {
                 slidesToShow: 1,
