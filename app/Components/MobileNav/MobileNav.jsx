@@ -18,13 +18,15 @@ const MobileNav = () => {
             <div className="mobileNav">
                 <div className="wrapper">
                     <div className="navContainer">
-                        <Image
-                            className="logo"
-                            src="/assets/logo.png"
-                            alt=""
-                            width={180}
-                            height={60}
-                        />
+                        <a href="/">
+                            <Image 
+                                className="logo"
+                                src="/assets/logo.png"
+                                alt=""
+                                width={180}
+                                height={60}
+                            />
+                        </a>
                         <div
                             className={`hamburger ${menuOpen ? "open" : ""}`}
                             onClick={() => setMenuOpen(!menuOpen)}

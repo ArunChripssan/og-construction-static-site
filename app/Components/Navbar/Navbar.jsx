@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from 'next/navigation';
 import { useState } from "react";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
@@ -11,6 +12,8 @@ import "./Navbar.scss";
 const Navbar = () => {
     const [aboutAnchorEl, setAboutAnchorEl] = useState(null);
     const [projectsAnchorEl, setProjectsAnchorEl] = useState(null);
+    const pathname = usePathname();
+
 
     const handleAboutClick = (event) => {
         setAboutAnchorEl(event.currentTarget);
@@ -32,23 +35,20 @@ const Navbar = () => {
             <nav className="nav">
                 <div className="wrapper">
                     <div className="container">
-                        <Image src="/assets/logo.png" alt="" width={180} height={50} className="logo" />
+                        <a href="/">
+                            <Image src="/assets/logo.png" alt="" width={180} height={50} className="logo" />
+                        </a>
                         <ul className="nav-list">
-                            <li className="nav-item">
+                            <li className={`nav-item ${pathname === '/' ? 'active' : ''}`}>
                                 <Link className="nav-link" href="/">HOME</Link>
                             </li>
-
-                            <li
-                                className="nav-item dropDownItem"
-                                onClick={handleAboutClick}
-                            >
-                                ABOUT US
-                                <Image src="/assets/icons/down-arrow.png" alt="" width={16} height={16} className="downArrow" />
+                            <li className={`nav-item  ${pathname.startsWith('/about') || pathname.startsWith('/awards') ? 'active' : ''}`} onClick={handleAboutClick}>
+                                <div className="dropDownItem">
+                                    ABOUT US
+                                    <Image src="/assets/icons/down-arrow.png" alt="" width={16} height={16} className="downArrow" />
+                                </div>
                             </li>
-                            <Menu
-                                anchorEl={aboutAnchorEl}
-                                open={Boolean(aboutAnchorEl)}
-                                onClose={handleClose}
+                            <Menu anchorEl={aboutAnchorEl} open={Boolean(aboutAnchorEl)} onClose={handleClose}
                                  sx={{
                                     "& .MuiPaper-root": {
                                         backgroundColor: "#33b9ed",
@@ -61,16 +61,15 @@ const Navbar = () => {
                                 <MenuItem onClick={handleClose}><Link className="nav-link" href="/awards">AWARDS & CERTIFICATION</Link></MenuItem>
                             </Menu>
 
-                            <li className="nav-item">
+                            <li className={`nav-item ${pathname === '/services' ? 'active' : ''}`}>
                                 <Link className="nav-link" href="/services">SERVICES</Link>
                             </li>
 
-                            <li
-                                className="nav-item dropDownItem"
-                                onClick={handleProjectsClick}
-                            >
-                                PROJECTS
-                                <Image src="/assets/icons/down-arrow.png" alt="" width={16} height={16} className="downArrow" />
+                            <li className={`nav-item  ${pathname.startsWith('/completedProjects') || pathname.startsWith('/onGoingProjects') ? 'active' : ''}`} onClick={handleProjectsClick}>
+                                <div className="dropDownItem">
+                                    PROJECTS
+                                    <Image src="/assets/icons/down-arrow.png" alt="" width={16} height={16} className="downArrow" />
+                                </div>
                             </li>
                             <Menu
                                 anchorEl={projectsAnchorEl}
@@ -88,8 +87,8 @@ const Navbar = () => {
                                 <MenuItem onClick={handleClose}><Link className="nav-link" href="/onGoingProjects">ONGOING PROJECTS</Link></MenuItem>
                             </Menu>
 
-                            <li className="nav-item"><Link className="nav-link" href="/ourClients">OUR CLIENTS</Link></li>
-                            <li className="nav-item"><Link className="nav-link" href="/careers">CAREERS</Link></li>
+                            <li className={`nav-item ${pathname === '/ourClients' ? 'active' : ''}`}><Link className="nav-link" href="/ourClients">OUR CLIENTS</Link></li>
+                            <li className={`nav-item ${pathname === '/careers' ? 'active' : ''}`}><Link className="nav-link" href="/careers">CAREERS</Link></li>
                             <li className="nav-item"><Link className="nav-link" href="">PROFILE</Link></li>
                         </ul>
                         <Link href="/contact">
