@@ -27,10 +27,10 @@
         .nav-list {
             display: flex;
             align-items: center;
-            gap: 30px;
             justify-content: space-around;
 
             .nav-item {
+                margin: 0 18px;
                 position: relative;
                 list-style: none;
                 color: #fff;
@@ -40,20 +40,12 @@
                 }
             }
 
-            .active::after {
-                display: block;
-                content: "";
-                background-color: #17beff;
-                height: 3px;
-                width: 100%;
-                margin-top: 5px;
-            }
-
             .dropDownItem {
                 display: flex;
                 align-items: center;
                 gap: 10px;
                 cursor: pointer;
+
             }
             .nav-link {
                 display: flex;
@@ -104,6 +96,7 @@
         }
     }
 }
+
 
 @media screen and (min-width: 769px) and (max-width: 1025px) {
     .nav {

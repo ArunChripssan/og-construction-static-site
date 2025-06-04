@@ -18,15 +18,13 @@ const MobileNav = () => {
             <div className="mobileNav">
                 <div className="wrapper">
                     <div className="navContainer">
-                        <a href="/">
-                            <Image
-                                className="logo"
-                                src="/assets/logo.png"
-                                alt=""
-                                width={180}
-                                height={60}
-                            />
-                        </a>
+                        <Image
+                            className="logo"
+                            src="/assets/logo.png"
+                            alt=""
+                            width={180}
+                            height={60}
+                        />
                         <div
                             className={`hamburger ${menuOpen ? "open" : ""}`}
                             onClick={() => setMenuOpen(!menuOpen)}
@@ -51,11 +49,19 @@ const MobileNav = () => {
                                         </li>
                                         <li className="nav-item">
                                             <div
-                                                className={`nav-link about ${isAboutSubMenuOpen? "subMenuOpen": ""}`}
+                                                className={`nav-link about ${
+                                                    isAboutSubMenuOpen
+                                                        ? "subMenuOpen"
+                                                        : ""
+                                                }`}
                                                 href="/about"
                                                 onClick={() => {
-                                                    setAboutSubmenu(!aboutSubmenu);
-                                                    setIsAboutSubMenuOpen(!isAboutSubMenuOpen);
+                                                    setAboutSubmenu(
+                                                        !aboutSubmenu
+                                                    );
+                                                    setIsAboutSubMenuOpen(
+                                                        !isAboutSubMenuOpen
+                                                    );
                                                 }}
                                             >
                                                 ABOUT
@@ -93,7 +99,11 @@ const MobileNav = () => {
                                         </li>
                                         <li className="nav-item ">
                                             <div
-                                                className={`nav-link projects ${isProjectSubMenuOpen? "subMenuOpen": ""}`}
+                                                className={`nav-link projects ${
+                                                    isProjectSubMenuOpen
+                                                        ? "subMenuOpen"
+                                                        : ""
+                                                }`}
                                                 href="/projects"
                                                 onClick={() => {
                                                     setProjectSubmenu(
