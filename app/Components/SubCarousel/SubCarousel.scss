@@ -5,7 +5,7 @@
     flex-direction: column;
     justify-content: center;
     position: absolute;
-    bottom: 40px;
+    bottom: 0;
     left: 0;
     right: 0;
 
@@ -28,11 +28,6 @@
     }
 }
 
-@media screen and (max-width: 1440px) {
-    .slider-container {
-        bottom: 15px;
-    }
-}
 
 @media screen and (max-width: 765px) {
     .slider-container {
