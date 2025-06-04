@@ -51,19 +51,11 @@ const MobileNav = () => {
                                         </li>
                                         <li className="nav-item">
                                             <div
-                                                className={`nav-link about ${
-                                                    isAboutSubMenuOpen
-                                                        ? "subMenuOpen"
-                                                        : ""
-                                                }`}
+                                                className={`nav-link about ${isAboutSubMenuOpen? "subMenuOpen": ""}`}
                                                 href="/about"
                                                 onClick={() => {
-                                                    setAboutSubmenu(
-                                                        !aboutSubmenu
-                                                    );
-                                                    setIsAboutSubMenuOpen(
-                                                        !isAboutSubMenuOpen
-                                                    );
+                                                    setAboutSubmenu(!aboutSubmenu);
+                                                    setIsAboutSubMenuOpen(!isAboutSubMenuOpen);
                                                 }}
                                             >
                                                 ABOUT
@@ -101,11 +93,7 @@ const MobileNav = () => {
                                         </li>
                                         <li className="nav-item ">
                                             <div
-                                                className={`nav-link projects ${
-                                                    isProjectSubMenuOpen
-                                                        ? "subMenuOpen"
-                                                        : ""
-                                                }`}
+                                                className={`nav-link projects ${isProjectSubMenuOpen? "subMenuOpen": ""}`}
                                                 href="/projects"
                                                 onClick={() => {
                                                     setProjectSubmenu(
