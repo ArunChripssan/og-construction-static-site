@@ -1,15 +1,12 @@
 "use client";
 import React, { useState } from "react";
+import {landmarkImages} from '../../../../data/landmarks'
 import "./Landmarks.scss";
 
-const images = [
-    "/assets/carousel/img1.jpg",
-    "/assets/carousel/img2.jpg",
-    "/assets/carousel/img1.jpg",
-];
+const defaultImg = "/assets/carousel/img2.jpg"
 
 const Landmarks = () => {
-    const [selectedImage, setSelectedImage] = useState(images[0]);
+    const [selectedImage, setSelectedImage] = useState(defaultImg);
 
     return (
         <div className="wrapper">
@@ -22,17 +19,15 @@ const Landmarks = () => {
                         <img src={selectedImage} alt="Main Landmark" />
                     </div>
                     <div className="subImages">
-                        {images.map((img, index) => (
+                        {landmarkImages.map((img, index) => (
                             <div
                                 key={index}
                                 className="subImage"
-                                onMouseEnter={() => setSelectedImage(img)}
-                                onClick={() => setSelectedImage(img)}
+                                onMouseEnter={() => setSelectedImage(img.imgSrc)}
+                                onClick={() => setSelectedImage(img.imgSrc)}
                             >
-                                <img src={img} alt={`Landmark ${index}`} />
-                                <div className="text">
-                                    Oman Shooting Area
-                                </div>
+                                <img src={img.imgSrc} alt={`Landmark ${index}`} />
+                                <div className="text">{img.name}</div>
                             </div>
                         ))}
                     </div>
