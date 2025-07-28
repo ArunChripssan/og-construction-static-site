@@ -11,8 +11,8 @@ const OnGoingHeroSec = () => {
                         className="imageSec"
                         src="/assets/completed-project.png"
                         alt=""
-                        width={500}
-						height={400}
+                        width={450}
+						height={350}
                     />
                 </span>
                 <div className="container">

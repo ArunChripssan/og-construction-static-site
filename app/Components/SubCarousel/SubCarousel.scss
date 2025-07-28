@@ -1,36 +1,311 @@
-@use "../../scss/main" as *;
+// Variables
+$carousel-height: 400px;
+$carousel-border-radius: 0.5rem;
+$primary-color: #22d3ee; // cyan-400
+$primary-hover: #06b6d4; // cyan-500
+$overlay-gradient: linear-gradient(to right, rgba(0, 0, 0, 0.6), transparent);
+$transition-duration: 0.5s;
+$arrow-size: 3rem;
+$indicator-size: 0.75rem;
 
-.slider-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-
-    .slick-track {
-        display: flex;
-        align-items: center;
-    }
-
-    .slick-active {
-        img {
-            height: 220px;
-            transition: all 0.3s ease;
-        }
-    }
-    .slick-center {
-        img {
-            transition: all 0.3s ease;
-            height: 250px;
-        }
-    }
+// Mixins
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-@media screen and (max-width: 765px) {
-    .slider-container {
-        display: none;
+// Main carousel wrapper
+.carouselWrapper {
+  width: 100%;
+  max-width: 72rem; // max-w-6xl
+  margin: 0 auto;
+  
+  @media (max-width: 768px) {
+    padding: 0 1rem;
+  }
+}
+
+// Carousel container
+.carousel {
+  position: relative;
+  width: 100%;
+  height: $carousel-height;
+  overflow: hidden;
+  border-radius: $carousel-border-radius;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  
+  &:focus-within {
+    outline: 2px solid $primary-color;
+    outline-offset: 2px;
+  }
+}
+
+// Slide styles
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity $transition-duration ease-in-out;
+  
+  &Active {
+    opacity: 1;
+    z-index: 1;
+  }
+}
+
+.slideImage {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.slideOverlay {
+  position: absolute;
+  inset: 0;
+  background: $overlay-gradient;
+  z-index: 2;
+}
+
+.slideContent {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  z-index: 10;
+  
+  @media (max-width: 768px) {
+    bottom: 1.5rem;
+    left: 1.5rem;
+  }
+}
+
+.slideTitle {
+  color: white;
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  
+  @media (max-width: 768px) {
+    font-size: 1.875rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.5rem;
+  }
+}
+
+// Navigation arrows
+.navArrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+  background: rgba($primary-color, 0.9);
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 0.125rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  @include flex-center;
+  
+  &:hover {
+    background: $primary-color;
+    transform: translateY(-50%) scale(1.1);
+  }
+  
+  &:focus {
+    outline: 2px solid white;
+    outline-offset: 2px;
+  }
+  
+  &:active {
+    transform: translateY(-50%) scale(0.95);
+  }
+  
+  &Disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    
+    &:hover {
+      transform: translateY(-50%);
     }
+  }
+}
+
+.navArrowLeft {
+  left: 1rem;
+  
+  @media (max-width: 768px) {
+    left: 0.5rem;
+  }
+}
+
+.navArrowRight {
+  right: 1rem;
+  
+  @media (max-width: 768px) {
+    right: 0.5rem;
+  }
+}
+
+// Indicators
+.indicators {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.indicator {
+  width: $indicator-size;
+  height: $indicator-size;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  
+  &:hover {
+    background: rgba(255, 255, 255, 0.7);
+    transform: scale(1.1);
+  }
+  
+  &:focus {
+    outline: 2px solid $primary-color;
+    outline-offset: 2px;
+  }
+  
+  &Active {
+    background: $primary-color;
+    transform: scale(1.1);
+  }
+}
+
+// Progress bar
+.progressBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0.25rem;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.progressFill {
+  height: 100%;
+  background: $primary-color;
+  transition: width 0.1s ease-linear;
+}
+
+// Carousel info
+.carouselInfo {
+  margin-top: 1.5rem;
+  text-align: center;
+  @include flex-center;
+  flex-direction: column;
+  gap: 0.5rem;
+  
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.carouselCounter {
+  color: #6b7280; // gray-600
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.playPauseBtn {
+  padding: 0.5rem 1rem;
+  background: $primary-color;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+  
+  &:hover {
+    background: $primary-hover;
+    transform: translateY(-1px);
+  }
+  
+  &:focus {
+    outline: 2px solid $primary-color;
+    outline-offset: 2px;
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+// Animation keyframes
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+// Accessibility improvements
+@media (prefers-reduced-motion: reduce) {
+  .slide,
+  .navArrow,
+  .indicator,
+  .progressFill,
+  .playPauseBtn {
+    transition: none;
+  }
+}
+
+@media (prefers-contrast: high) {
+  .navArrow {
+    background: black;
+    border: 2px solid white;
+  }
+  
+  .indicator {
+    border: 2px solid white;
+    
+    &Active {
+      background: white;
+      border-color: black;
+    }
+  }
 }

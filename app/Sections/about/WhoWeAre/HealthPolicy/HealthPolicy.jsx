@@ -48,9 +48,9 @@ const HealthPolicy = () => {
                         }}
                     >
                         <Timeline position="left">
-                            {steps.map((step, index) => (
+                            {steps.map((step, i) => (
                                 <TimelineItem
-                                    key={step.number}
+                                    key={i}
                                     sx={{
                                         "&::before": {
                                             display: "none",
@@ -95,7 +95,7 @@ const HealthPolicy = () => {
                                                 {step.number}
                                             </Typography>
                                         </TimelineDot>
-                                        {index < steps.length - 1 && (
+                                        {i < steps.length - 1 && (
                                             <TimelineConnector
                                                 sx={{
                                                     backgroundColor: "#8ecae6",

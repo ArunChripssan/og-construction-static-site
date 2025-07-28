@@ -9,19 +9,19 @@ const Aboutus = () => {
             <div className="about-usSec">
                 <div className="container">
                     <Image
-                            className="neonEllipse"
-                            src="/assets/ellipse.png"
-                            alt=""
-                            width={900}
-                            height={700}
-                        />
+                        className="neonEllipse"
+                        src="/assets/ellipse.png"
+                        alt=""
+                        width={900}
+                        height={700}
+                    />
                     <div className="leftSec">
                         <Image
                             className="aboutUsImg"
                             src="/assets/about-us.png"
                             alt=""
-                            width={520}
-                            height={500}
+                            width={350}
+                            height={380}
                         />
                         
                         <div className="content">
@@ -57,3 +57,4 @@ const Aboutus = () => {
 };
 
 export default Aboutus;
+

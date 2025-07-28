@@ -50,14 +50,6 @@
     }
 }
 
-@media screen and (max-width: 1440px) {
-    .onGoingProjectCardSec {
-        .cardSec {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-}
-
 @media screen and (max-width: 1439px) {
     .onGoingProjectCardSec {
         .categorySec {

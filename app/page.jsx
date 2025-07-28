@@ -17,7 +17,7 @@ const page = () => {
             <Experience/>
             <Achievement/>
             <GlobalPresence/>
-            <Testimonials/>
+            {/* <Testimonials/> */}
         </>
     );
 };

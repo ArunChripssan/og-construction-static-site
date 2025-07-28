@@ -2,7 +2,7 @@
 
 .nav {
     position: fixed;
-    font-family: RacingSansOne;
+    font-family: Poppins-Regular;
     width: 100%;
     background-color: rgba(#33b9ed, 0.067);
     backdrop-filter: blur(100px);
@@ -15,7 +15,7 @@
         align-items: center;
         justify-content: center;
         gap: 30px;
-        height: 88px;
+        height: 85px;
 
         .logo {
             width: 160px;
@@ -46,21 +46,23 @@
                 background-color: #17beff;
                 height: 3px;
                 width: 100%;
-                margin-top: 5px;
+                margin-top: 3px;
             }
 
             .dropDownItem {
                 display: flex;
                 align-items: center;
-                gap: 10px;
+                gap: 2px;
                 cursor: pointer;
-
             }
             .nav-link {
                 display: flex;
                 gap: 10px;
                 align-items: center;
             }
+        }
+        .nav-item-name {
+            font-size: 14px;
         }
 
         .contact {
@@ -84,7 +86,7 @@
     }
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 769px) {
     .nav {
         display: none;
     }
@@ -106,12 +108,11 @@
     }
 }
 
-
 @media screen and (min-width: 769px) and (max-width: 1025px) {
     .nav {
         .container {
             .nav-list {
-                gap: 30px;
+                gap: 22px;
             }
         }
     }

@@ -23,8 +23,8 @@ const MobileNav = () => {
                                 className="logo"
                                 src="/assets/logo.png"
                                 alt=""
-                                width={180}
-                                height={60}
+                                width={120}
+                                height={40}
                             />
                         </a>
                         <div

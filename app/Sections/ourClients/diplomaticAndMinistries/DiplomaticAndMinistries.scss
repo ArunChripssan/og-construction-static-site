@@ -6,7 +6,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 150px;
+    padding-top: 80px;
 
     .title {
         color: #ffffff;
@@ -38,18 +38,11 @@
     }
 }
 
-@media screen and (max-width: 1440px) {
+
+@media screen and (max-width: 769px) {
     .diplomaticAndMinistriesSec {
         .logo-grid {
             grid-template-columns: repeat(2, 1fr);
-        }
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .diplomaticAndMinistriesSec {
-        .logo-grid {
-            grid-template-columns: repeat(1, 1fr);
         }
     }
 }

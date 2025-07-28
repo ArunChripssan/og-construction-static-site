@@ -38,9 +38,9 @@ const SafetyPolicy = () => {
             </div>
             <div className="contentWrapper">
                 <div className="leftSec">
-                    {contentsLeft.map((data) => {
+                    {contentsLeft.map((data, i) => {
                         return (
-                            <div className="content" key={data.id}>
+                            <div className="content" key={i}>
                                 <div className="bullet" >
                                     <h2>{data.number}</h2>
                                 </div>
@@ -58,9 +58,9 @@ const SafetyPolicy = () => {
                     />
                 </div>
                 <div className="rightSec">
-                    {contentsRight.map((data) => {
+                    {contentsRight.map((data, i) => {
                         return (
-                            <div className="content" key={data.id}>
+                            <div className="content" key={i}>
                                 <div className="bullet">
                                     <h2>{data.number}</h2>
                                 </div>

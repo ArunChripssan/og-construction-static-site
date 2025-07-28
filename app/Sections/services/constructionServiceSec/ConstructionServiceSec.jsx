@@ -30,15 +30,15 @@ const ConstructionServiceSec = () => {
                         <Image
                             src="/assets/constructionService.png"
                             alt=""
-                            width={500}
-                            height={450}
+                            width={400}
+                            height={350}
                         />
                         <Image
                             className="neonEllipse"
                             src="/assets/ellipse.png"
                             alt=""
-                            width={850}
-                            height={750}
+                            width={750}
+                            height={650}
                         />
                     </div>
                 </div>

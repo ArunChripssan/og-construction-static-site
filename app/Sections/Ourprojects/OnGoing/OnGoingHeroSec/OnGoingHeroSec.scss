@@ -4,17 +4,15 @@
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
-    padding: 50px;
+    gap: 50px;
+    padding: 100px 0 0 0;
     flex-wrap: wrap;
+    background-size: cover;
     
     .container {
         display: flex;
         justify-content: center;
-        background-color: rgb(255, 255, 255, 0.2);
-        backdrop-filter: blur(100px);
-        width: 700px;
-        padding-block: 50px;
-
+        width: 600px;
         
         .contents {
             max-width: 600px;
@@ -31,7 +29,6 @@
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
             }
-
             .text {
                 display: flex;
                 gap: 20px;
@@ -40,57 +37,12 @@
                 line-height: 28px;
             }
         }
-        
     }
     .subDiv {
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 50px;
-        background: linear-gradient(#085776, #149fd5);
     }
-}
-
-@media screen and (max-width: 1441px) {
-    .onGoingHeroSec{
-        .container{
-            width: 600px;
-        }
-
-        .subDiv {
-            width: 350px;
-            img {
-                height: 280;
-            }
-        }
-    }
-    
-}
-
-@media screen and (max-width: 1439px) {
-    .onGoingHeroSec{
-        .container{
-            background-color: transparent;
-            padding: 0;
-
-            .contents {
-
-                .title {
-                    text-align: center;
-                }
-            }
-        }
-
-        .subDiv {
-            width: 100%;
-            background: transparent;
-            img {
-                height: 400;
-                width: 800;
-            }
-        }
-    }
-    
 }
 
 @media screen and (max-width: 426px) {

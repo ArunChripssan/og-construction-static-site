@@ -16,7 +16,7 @@ const Carousel = () => {
         slidesToScroll: 1,
         waitForAnimate: true,
         autoplay: true,
-        speed: 2000,
+        speed: 2500,
         autoplaySpeed: 5000,
         cssEase: "linear",
         pauseOnHover: false
@@ -27,7 +27,7 @@ const Carousel = () => {
             <Slider {...settings}>
                 {carouselImages.map((data, i) => {
                     return(
-                        <div className="slider">
+                        <div className="slider" key={i}>
                             <Image
                                 src={data.imgSrc}
                                 alt=""

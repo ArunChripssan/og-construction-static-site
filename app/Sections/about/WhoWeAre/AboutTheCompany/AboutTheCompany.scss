@@ -20,80 +20,49 @@
         line-height: 1.6;
         letter-spacing: 1;
     }
-
-    .title {
-        margin-bottom: 60px;
-    }
-
-    .mobViewTopSec {
-        position: relative;
-        display: none;
-
-        .neonEllipse {
-            position: absolute;
-            top: 0;
-            z-index: -1;
-        }
-    }
-
-    .container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        .leftSec {
-            max-width: 500px;
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-
-            h1 {
-                font-family: RacingSansOne;
-                font-size: 45px;
-                background: linear-gradient(90deg, #17beff 0%, #fcffff 100%);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-            }
-        }
-
-        .middleSec {
-            display: block;
-            .neonEllipse {
-                position: absolute;
-                top: 0;
-                z-index: -1;
-                transform: translate(-200px);
-            }
-        }
-
-        .rightSec {
-            max-width: 500px;
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
-    }
-}
-@media screen and (max-width: 1441px) {
-    .aboutTheCompanySec {
-        flex-wrap: wrap;
-
-        .mobViewTopSec {
-            display: block;
+    .bottomSec {
+        .title {
+            margin-block: 0;
         }
         .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
             column-gap: 30px;
             margin-top: 40px;
-            .middleSec {
-                display: none;
+
+            .leftSec {
+                max-width: 500px;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+
+                h1 {
+                    font-family: RacingSansOne;
+                    font-size: 45px;
+                    background: linear-gradient(
+                        90deg,
+                        #17beff 0%,
+                        #fcffff 100%
+                    );
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+            .rightSec {
+                max-width: 500px;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
             }
         }
     }
 }
+
 
 @media screen and (max-width: 769px) {
     .aboutTheCompanySec {
-       
         .container {
             align-items: center;
             justify-content: center;
@@ -108,10 +77,10 @@
 
 @media screen and (max-width: 426px) {
     .aboutTheCompanySec {
-        .mobViewTopSec {
+        .topSec {
             img {
-                height: 300px;
-                width: 350px;
+                width: 350;
+                height: 250;
             }
         }
         .container {
@@ -125,7 +94,6 @@
                 font-size: 15px;
             }
         }
-
     }
 }
 

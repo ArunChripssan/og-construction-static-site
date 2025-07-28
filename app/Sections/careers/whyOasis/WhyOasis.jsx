@@ -13,8 +13,8 @@ const WhyOasis = () => {
                     <Image
                         src="/assets/whyOasis.png"
                         alt=""
-                        width={500}
-                        height={470}
+                        width={350}
+                        height={350}
                     />
                 </div>
                 <div className="rightSec">

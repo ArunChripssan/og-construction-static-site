@@ -1,25 +1,42 @@
+// Components/ProjectCard/Card.jsx
+"use client";
 import Image from "next/image";
-import React from "react";
-import './Card.scss';
+import React, { useState } from "react";
+import "./Card.scss";
+import ProjectDialog from "../ProjectDialog/ProjectDIalog";
 
-const Card = ({id, title, imgurl}) => {
-    
+const Card = ({ id, title, imgurl, client, consultant, value, location }) => {
+    const [openDialog, setOpenDialog] = useState(false);
+
+    const project = { id, title, imgurl, client, consultant, value, location };
+
+    const OpenProjectDialog = () => {
+        setOpenDialog(true);
+    };
+    const handleCloseProjectDialog = () => {
+        setOpenDialog(false);
+    };
+
     return (
-        <div className="projectCard" key={''}>
-            
-            <Image
-                src={imgurl}
-                alt=""
-                fill
-                style={{objectFit: "cover"}}
-            />
-            <div className="overlay">
-                <h2>{title}</h2>
+        <>
+            <div className="projectCard" onClick={() => OpenProjectDialog()}>
+                <Image
+                    src={imgurl[0]}
+                    alt={title} 
+                    fill
+                    style={{ objectFit: "cover" }}
+                />
+                <div className="overlay">
+                    <p>{title}</p>
+                </div>
             </div>
-        </div>
+            <ProjectDialog
+                open={openDialog}
+                onClose={handleCloseProjectDialog}
+                project={project}
+            />
+        </>
     );
 };
 
 export default Card;
-
-

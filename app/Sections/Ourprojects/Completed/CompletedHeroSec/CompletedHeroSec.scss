@@ -4,17 +4,15 @@
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
-    padding: 50px;
+    gap: 50px;
+    padding: 100px 0 0 0;
     flex-wrap: wrap;
+    background-size: cover;
     
     .container {
         display: flex;
         justify-content: center;
-        background-color: rgb(255, 255, 255, 0.2);
-        backdrop-filter: blur(100px);
-        width: 700px;
-        padding-block: 50px;
-
+        width: 600px;
         
         .contents {
             max-width: 600px;
@@ -25,7 +23,7 @@
 
             .title {
                 font-family: RacingSansOne;
-                font-size: 45px;
+                font-size: 42px;
                 letter-spacing: 1;
                 background: linear-gradient(90deg, #3dbef1, #ffffff);
                 -webkit-background-clip: text;
@@ -46,51 +44,19 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 50px;
-        background: linear-gradient(#085776, #149fd5);
     }
 }
 
-@media screen and (max-width: 1441px) {
-    .completedHeroSec{
-        .container{
-            width: 650px;
-        }
-
-        .subDiv {
-            width: 350px;
-            img {
-                height: 280;
-            }
-        }
-    }
-    
-}
-
-@media screen and (max-width: 1439px) {
-    .completedHeroSec{
-        .container{
-            background-color: transparent;
-            padding: 0;
-
+@media screen and (max-width: 769px) {
+    .completedHeroSec {
+        .container {
             .contents {
-
                 .title {
                     text-align: center;
                 }
             }
         }
-
-        .subDiv {
-            width: 100%;
-            background: transparent;
-            img {
-                height: 400;
-                width: 800;
-            }
-        }
     }
-    
 }
 
 @media screen and (max-width: 426px) {

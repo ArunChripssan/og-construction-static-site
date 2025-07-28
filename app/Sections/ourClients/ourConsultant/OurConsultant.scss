@@ -6,7 +6,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-block: 120px;
+    margin-top: 80px;
 
     .title {
         color: #ffffff;
@@ -38,15 +38,7 @@
     }
 }
 
-@media screen and (max-width: 1440px) {
-    .ourConsultantSec {
-        .logo-grid {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-}
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
     .ourConsultantSec {
         .logo-grid {
             grid-template-columns: repeat(1, 1fr);

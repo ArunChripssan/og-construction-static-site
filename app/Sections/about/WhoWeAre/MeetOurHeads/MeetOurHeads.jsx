@@ -23,9 +23,9 @@ const MeetOurHeads = () => {
                     <div className="cardSec">
                         <div className="card">
                             <Image
-                                src= "/assets/sultan.png"
+                                src= "/assets/sultan kharusi.png"
                                 alt = ""
-                                width={400}
+                                width={380}
                                 height={500}
                             />
                             <Image
@@ -49,9 +49,9 @@ const MeetOurHeads = () => {
                                 height={600}
                             />
                             <Image
-                                src= "/assets/robin.png"
+                                src= "/assets/JMR.jpg"
                                 alt = ""
-                                width={400}
+                                width={380}
                                 height={500}
                             />
                             <div className="name">

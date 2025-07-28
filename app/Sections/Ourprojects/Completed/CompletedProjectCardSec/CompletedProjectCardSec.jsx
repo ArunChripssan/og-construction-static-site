@@ -3,16 +3,17 @@
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import Card from "../../../../Components/ProjectCard/Card";
+import Card from "../../../../Components/ProjectCard/Card"; 
 import React, { useState } from "react";
-import { completedProjects } from "../../../../../data/completedProjects";
-import { projectCategories } from "../../../../../data/projectCategories";
+import { completedProjects } from "../../../../../data/completedProjects"; 
+import { projectCategories } from "../../../../../data/projectCategories"; 
 import "./CompletedProjectCardSec.scss";
 import Image from "next/image";
 
 const CompletedProjectCardSec = () => {
     const [active, setActive] = useState("All");
     const [anchorEl, setAnchorEl] = React.useState(null);
+
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
@@ -58,7 +59,7 @@ const CompletedProjectCardSec = () => {
                     >
                         <Image
                             src="/assets/icons/filter.png"
-                            alt=""
+                            alt="Filter" // Added alt text
                             width={32}
                             height={32}
                         />

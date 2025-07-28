@@ -25,8 +25,8 @@ const Experience = () => {
                         <Image
                             src="/assets/mechanical-engineer.png"
                             alt=""
-                            width={550}
-                            height={550}
+                            width={450}
+                            height={450}
                             className="aboutus"
                         />
                         <Image
