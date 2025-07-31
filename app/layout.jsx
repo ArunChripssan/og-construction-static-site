@@ -12,11 +12,11 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body>
-                <NProgressProvider>
+                {/* <NProgressProvider> */}
                     <Navbar />
                     {children}
                     <Footer />
-                </NProgressProvider>
+                {/* </NProgressProvider> */}
             </body>
         </html>
     );
