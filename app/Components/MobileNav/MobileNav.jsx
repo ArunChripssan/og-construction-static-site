@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./MobileNav.scss";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
@@ -13,13 +13,54 @@ const MobileNav = () => {
     const [aboutSubmenu, setAboutSubmenu] = useState(false);
     const [projectSubmenu, setProjectSubmenu] = useState(false);
 
+    // Ref for the mobile navigation container
+    const mobileNavRef = useRef(null);
+
+    // Function to close the menu
+    const closeMenu = () => {
+        setMenuOpen(false);
+        setIsAboutSubMenuOpen(false); // Close submenus when main menu closes
+        setAboutSubmenu(false);
+        setIsProjectSubMenuOpen(false); // Close submenus when main menu closes
+        setProjectSubmenu(false);
+    };
+
+    // Effect to handle clicks outside the menu
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (
+                mobileNavRef.current &&
+                !mobileNavRef.current.contains(event.target)
+            ) {
+                closeMenu();
+            }
+        };
+
+        // Add event listener when menu is open
+        if (menuOpen) {
+            document.addEventListener("mousedown", handleClickOutside);
+        } else {
+            // Clean up event listener when menu is closed
+            document.removeEventListener("mousedown", handleClickOutside);
+        }
+
+        // Clean up event listener on component unmount
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [menuOpen]); // Re-run effect when menuOpen changes
+
     return (
         <AnimatePresence>
-            <div className="mobileNav">
+            <div className="mobileNav" ref={mobileNavRef}>
+                {" "}
+                {/* Attach ref here */}
                 <div className="wrapper">
                     <div className="navContainer">
-                        <a href="/">
-                            <Image 
+                        <a href="/" onClick={closeMenu}>
+                            {" "}
+                            {/* Close menu on logo click */}
+                            <Image
                                 className="logo"
                                 src="/assets/logo.png"
                                 alt=""
@@ -45,7 +86,11 @@ const MobileNav = () => {
                                 <div className="menu-items">
                                     <ul className="nav-list">
                                         <li className="nav-item">
-                                            <Link className="nav-link" href="/">
+                                            <Link
+                                                className="nav-link"
+                                                href="/"
+                                                onClick={closeMenu}
+                                            >
                                                 HOME
                                             </Link>
                                         </li>
@@ -56,7 +101,6 @@ const MobileNav = () => {
                                                         ? "subMenuOpen"
                                                         : ""
                                                 }`}
-                                                href="/about"
                                                 onClick={() => {
                                                     setAboutSubmenu(
                                                         !aboutSubmenu
@@ -78,12 +122,18 @@ const MobileNav = () => {
                                             {aboutSubmenu && (
                                                 <ul className="submenu">
                                                     <li>
-                                                        <Link href="/about">
+                                                        <Link
+                                                            href="/about"
+                                                            onClick={closeMenu}
+                                                        >
                                                             WHO WE ARE
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/awards">
+                                                        <Link
+                                                            href="/awards"
+                                                            onClick={closeMenu}
+                                                        >
                                                             AWARDS AND
                                                             CERTIFICATIONS
                                                         </Link>
@@ -95,6 +145,7 @@ const MobileNav = () => {
                                             <Link
                                                 className="nav-link "
                                                 href="/services"
+                                                onClick={closeMenu}
                                             >
                                                 SERVICES
                                             </Link>
@@ -106,7 +157,6 @@ const MobileNav = () => {
                                                         ? "subMenuOpen"
                                                         : ""
                                                 }`}
-                                                href="/projects"
                                                 onClick={() => {
                                                     setProjectSubmenu(
                                                         !projectSubmenu
@@ -128,12 +178,18 @@ const MobileNav = () => {
                                             {projectSubmenu && (
                                                 <ul className="submenu">
                                                     <li>
-                                                        <Link href="/completedProjects">
+                                                        <Link
+                                                            href="/completedProjects"
+                                                            onClick={closeMenu}
+                                                        >
                                                             COMPLETED PROJECTS
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/onGoingProjects">
+                                                        <Link
+                                                            href="/onGoingProjects"
+                                                            onClick={closeMenu}
+                                                        >
                                                             ONGOING PROJECTS
                                                         </Link>
                                                     </li>
@@ -144,6 +200,7 @@ const MobileNav = () => {
                                             <Link
                                                 className="nav-link"
                                                 href="/ourClients"
+                                                onClick={closeMenu}
                                             >
                                                 OUR CLIENTS
                                             </Link>
@@ -152,12 +209,17 @@ const MobileNav = () => {
                                             <Link
                                                 className="nav-link"
                                                 href="/careers"
+                                                onClick={closeMenu}
                                             >
                                                 CAREERS
                                             </Link>
                                         </li>
                                         <li className="nav-item">
-                                            <Link className="nav-link" href="">
+                                            <Link
+                                                className="nav-link"
+                                                href=""
+                                                onClick={closeMenu}
+                                            >
                                                 PROFILE
                                             </Link>
                                         </li>

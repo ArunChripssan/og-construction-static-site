@@ -34,7 +34,6 @@
     }
 
     .mobileCategorySec {
-        display: flex;
         justify-content: end;
         padding-top: 10px;
         border-top: 2px solid #17BEFF;
@@ -51,17 +50,20 @@
     }
 }
 
-@media screen and (max-width: 1439px) {
-    .completedProjectCardSec {
+@media screen and (max-width: 769px) {
+    .completedProjectCardSec{
+        .mobileCategorySec{
+            display: flex;
+        }
         .categorySec {
             display: none;
         }
-
-        .mobileCategorySec {
-            display: flex;
+        .cardSec {
+            grid-template-columns: repeat(2, 1fr);
         }
     }
 }
+
 
 @media screen and (max-width: 426px) {
     .completedProjectCardSec {

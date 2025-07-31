@@ -3,14 +3,14 @@
 .footer-container {
     display: flex;
     justify-content: space-between;
-    border-top: 2px solid #17BEFF;
-    border-bottom: 2px solid #17BEFF;
+    border-top: 2px solid #17beff;
+    border-bottom: 2px solid #17beff;
     padding: 30px 0;
     flex-wrap: wrap;
 
     h1 {
         font-family: RacingSansOne;
-        color: #17BEFF;
+        color: #17beff;
         margin-bottom: 10px;
     }
 
@@ -18,7 +18,9 @@
         font-family: Montserrat;
     }
 
-    .our-services,  .projects, .address {
+    .our-services,
+    .projects,
+    .address {
         display: flex;
         flex-direction: column;
         gap: 10px;
@@ -37,6 +39,19 @@
     .social-media {
         display: flex;
         gap: 20px;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .footer-container {
+        p {
+            font-size: 14px;
+        }
+    }
+    .footer-bottom {
+        p {
+            font-size: 14px;
+        }
     }
 }
 

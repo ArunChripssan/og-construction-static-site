@@ -39,6 +39,18 @@ export const diplomaticAndMinistries = [
         id: 10,
         imgLink: "/assets/ourClients/diplomaticMinistries/logo10.jpg"
     },    
+    {
+        id: 11,
+        imgLink: "/assets/ourClients/diplomaticMinistries/logo11.jpeg"
+    },    
+    {
+        id: 12,
+        imgLink: "/assets/ourClients/diplomaticMinistries/logo12.jpeg"
+    },    
+    {
+        id: 13,
+        imgLink: "/assets/ourClients/diplomaticMinistries/logo13.jpeg"
+    },    
 ]
 
 export const privateCompanies = [
@@ -177,6 +189,10 @@ export const privateCompanies = [
     {
         id: 34,
         imgLink: "/assets/ourClients/privateCompanies/logo34.jpg"
+    },    
+    {
+        id: 35,
+        imgLink: "/assets/ourClients/privateCompanies/logo35.png"
     },    
 ]
 

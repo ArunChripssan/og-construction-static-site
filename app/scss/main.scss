@@ -1,2 +1,6 @@
-@use './abstracts/abstract.scss';
-@use './base/base.scss';
+@use 'abstracts/variable';   
+@use 'abstracts/nprogress';  
+@use 'abstracts/common';
+@use 'base/reset';      
+@use 'base/typography'; 
+@use 'base/base'; 
