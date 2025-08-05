@@ -23,7 +23,7 @@ const MeetOurHeads = () => {
                     <div className="cardSec">
                         <div className="card">
                             <Image
-                                src= "/assets/Sultankharusi.png"
+                                src= "/assets/sultankharusi.png"
                                 alt = ""
                                 width={380}
                                 height={500}
