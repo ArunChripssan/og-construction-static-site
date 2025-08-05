@@ -5,7 +5,7 @@ import "./MeetOurHeads.scss";
 const MeetOurHeads = () => {
     return (
         <div className="meetOurHeadsSec">
-            {/* <div className="imageWrapper">
+            <div className="imageWrapper">
                 <Image
                     className="building-bg"
                     src="/assets/building-bg.png"
@@ -13,7 +13,7 @@ const MeetOurHeads = () => {
                     fill
                     style={{ objectFit: "cover" }}
                 />
-            </div> */}
+            </div>
             <div className="container">
                 <div className="wrapper">
                     <div className="title">
