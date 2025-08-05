@@ -5,15 +5,6 @@ import "./MeetOurHeads.scss";
 const MeetOurHeads = () => {
     return (
         <div className="meetOurHeadsSec">
-            <div className="imageWrapper">
-                <Image
-                    className="building-bg"
-                    src="/assets/building-bg.png"
-                    alt=""
-                    fill
-                    style={{ objectFit: "cover" }}
-                />
-            </div>
             <div className="container">
                 <div className="wrapper">
                     <div className="title">
@@ -23,7 +14,7 @@ const MeetOurHeads = () => {
                     <div className="cardSec">
                         <div className="card">
                             <Image
-                                src= "/assets/sultankharusi.png"
+                                src= "/assets/sultanKharusi.png"
                                 alt = ""
                                 width={380}
                                 height={500}
