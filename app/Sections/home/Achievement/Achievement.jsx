@@ -16,7 +16,6 @@ const Achievement = () => {
             />
             <div className="wrapper">
                 <h1 className="bold title">
-                    {" "}
                     <span className="color">Everlasting Trust,</span> it's What We Build
                 </h1>
                 <div className="container">
