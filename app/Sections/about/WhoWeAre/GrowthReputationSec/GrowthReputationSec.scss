@@ -4,8 +4,10 @@
     display: flex;
     align-items: end;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    gap: 80px;
+    gap: 120px;
+    margin-block: 100px;
 
     .leftSec {
         max-width: 600px;
@@ -16,6 +18,8 @@
         .title {
             font-family: RacingSansOne;
             letter-spacing: 1;
+            line-height: 1.2;
+            margin-block: 0;
             font-size: 50px;
             background: linear-gradient(90deg, #17BEFF 0%, #FCFFFF 100%);
             -webkit-background-clip: text;
@@ -66,14 +70,36 @@
     }
 }
 
+
+@media screen and (max-width: 1025px) {
+    .growthRepSec {
+        gap: 40px;
+        .leftSec {
+            order: 2;
+        }
+    }
+}
+
 @media screen and (max-width: 426px) {
     .growthRepSec {
+        gap: 35px;
+        margin-block: 60px;
+
         .leftSec {
             .contents {
                 padding: 30px 30px;
                 .bullet {
                     display: none;
                 }
+            }
+        }
+        .rightSec {
+            img {
+                width: 280px;
+                height: 400px;
+            }
+            .neonEllipse {
+                display: none;
             }
         }
     }

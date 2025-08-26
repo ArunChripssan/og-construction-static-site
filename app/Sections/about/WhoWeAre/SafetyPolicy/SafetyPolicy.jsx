@@ -28,28 +28,8 @@ const SafetyPolicy = () => {
     return (
         <div className="safetyPolicySec">
             <h1 className="title">Safety & Environmental Policy</h1>
-            <div className="mobImgWrapper">
-                <Image
-                    src="/assets/engineer-3.png"
-                    alt=""
-                    width={390}
-                    height={390}
-                />
-            </div>
             <div className="contentWrapper">
-                <div className="leftSec">
-                    {contentsLeft.map((data, i) => {
-                        return (
-                            <div className="content" key={i}>
-                                <div className="bullet" >
-                                    <h2>{data.number}</h2>
-                                </div>
-                                <p>{data.text}</p>
-                            </div>
-                        );
-                    })}
-                </div>
-                <div className="middleSec">
+                <div className="topSec">
                     <Image
                         src="/assets/engineer-3.png"
                         alt=""
@@ -57,17 +37,32 @@ const SafetyPolicy = () => {
                         height={390}
                     />
                 </div>
-                <div className="rightSec">
-                    {contentsRight.map((data, i) => {
-                        return (
-                            <div className="content" key={i}>
-                                <div className="bullet">
-                                    <h2>{data.number}</h2>
+                <div className="bottomSec">
+                    <div className="leftSec">
+                        {contentsLeft.map((data, i) => {
+                            return (
+                                <div className="content" key={i}>
+                                    <div className="bullet">
+                                        <h2>{data.number}</h2>
+                                    </div>
+                                    <p>{data.text}</p>
                                 </div>
-                                <p>{data.text}</p>
-                            </div>
-                        );
-                    })}
+                            );
+                        })}
+                    </div>
+
+                    <div className="rightSec">
+                        {contentsRight.map((data, i) => {
+                            return (
+                                <div className="content" key={i}>
+                                    <div className="bullet">
+                                        <h2>{data.number}</h2>
+                                    </div>
+                                    <p>{data.text}</p>
+                                </div>
+                            );
+                        })}
+                    </div>
                 </div>
             </div>
         </div>

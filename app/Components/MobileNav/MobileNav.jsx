@@ -13,19 +13,16 @@ const MobileNav = () => {
     const [aboutSubmenu, setAboutSubmenu] = useState(false);
     const [projectSubmenu, setProjectSubmenu] = useState(false);
 
-    // Ref for the mobile navigation container
     const mobileNavRef = useRef(null);
 
-    // Function to close the menu
     const closeMenu = () => {
         setMenuOpen(false);
-        setIsAboutSubMenuOpen(false); // Close submenus when main menu closes
+        setIsAboutSubMenuOpen(false); 
         setAboutSubmenu(false);
-        setIsProjectSubMenuOpen(false); // Close submenus when main menu closes
+        setIsProjectSubMenuOpen(false); 
         setProjectSubmenu(false);
     };
 
-    // Effect to handle clicks outside the menu
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (
@@ -36,30 +33,24 @@ const MobileNav = () => {
             }
         };
 
-        // Add event listener when menu is open
         if (menuOpen) {
             document.addEventListener("mousedown", handleClickOutside);
         } else {
-            // Clean up event listener when menu is closed
             document.removeEventListener("mousedown", handleClickOutside);
         }
 
-        // Clean up event listener on component unmount
         return () => {
             document.removeEventListener("mousedown", handleClickOutside);
         };
-    }, [menuOpen]); // Re-run effect when menuOpen changes
+    }, [menuOpen]); 
 
     return (
         <AnimatePresence>
             <div className="mobileNav" ref={mobileNavRef}>
-                {" "}
-                {/* Attach ref here */}
                 <div className="wrapper">
                     <div className="navContainer">
                         <a href="/" onClick={closeMenu}>
                             {" "}
-                            {/* Close menu on logo click */}
                             <Image
                                 className="logo"
                                 src="/assets/logo.png"
@@ -221,6 +212,15 @@ const MobileNav = () => {
                                                 onClick={closeMenu}
                                             >
                                                 PROFILE
+                                            </Link>
+                                        </li>
+                                        <li className="nav-item">
+                                            <Link
+                                                className="nav-link"
+                                                href="/contact"
+                                                onClick={closeMenu}
+                                            >
+                                                CONTACT US
                                             </Link>
                                         </li>
                                     </ul>

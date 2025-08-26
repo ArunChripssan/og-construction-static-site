@@ -5,95 +5,105 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+
+    .title {
+        margin-block: 0px;
+    }
 
     .contentWrapper {
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         margin-top: 40px;
         flex-wrap: wrap;
-        gap: 50px;
+        gap: 40px;
 
-        .leftSec {
-            max-width: 600px;
+        .bottomSec {
             display: flex;
-            flex-direction: column;
-            gap: 50px;
+            gap: 60px;
+            flex-wrap: wrap;
+            justify-content: center;
 
-            .content {
+            .leftSec {
+                max-width: 600px;
                 display: flex;
-                align-items: start;
-                gap: 30px;
+                flex-direction: column;
+                gap: 50px;
 
-                .bullet {
-                    font-size: 25px;
-                    background: linear-gradient(
-                        239.53deg,
-                        #17beff 18.52%,
-                        #0e7299 80.32%
-                    );
-                    padding: 2px 12px;
-                    border-radius: 50%;
-                }
-                p {
-                    font-family: Poppins-Regular;
-                    letter-spacing: 1;
+                .content {
+                    display: flex;
+                    align-items: start;
+                    gap: 30px;
+
+                    .bullet {
+                        font-size: 25px;
+                        background: linear-gradient(
+                            239.53deg,
+                            #17beff 18.52%,
+                            #0e7299 80.32%
+                        );
+                        padding: 2px 12px;
+                        border-radius: 50%;
+                    }
+                    p {
+                        font-family: Poppins-Regular;
+                        letter-spacing: 1;
+                    }
                 }
             }
-        }
 
-        .rightSec {
-            max-width: 600px;
-            display: flex;
-            flex-direction: column;
-            gap: 50px;
-
-            .content {
+            .rightSec {
+                max-width: 600px;
                 display: flex;
-                align-items: start;
-                gap: 30px;
+                flex-direction: column;
+                gap: 50px;
 
-                .bullet {
-                    font-size: 25px;
-                    background: linear-gradient(
-                        239.53deg,
-                        #17beff 18.52%,
-                        #0e7299 80.32%
-                    );
-                    padding: 2px 12px;
-                    border-radius: 50%;
-                }
+                .content {
+                    display: flex;
+                    align-items: start;
+                    gap: 30px;
 
-                p {
-                    font-family: Poppins-Regular;
-                    letter-spacing: 1;
+                    .bullet {
+                        font-size: 25px;
+                        background: linear-gradient(
+                            239.53deg,
+                            #17beff 18.52%,
+                            #0e7299 80.32%
+                        );
+                        padding: 2px 12px;
+                        border-radius: 50%;
+                    }
+
+                    p {
+                        font-family: Poppins-Regular;
+                        letter-spacing: 1;
+                    }
                 }
             }
         }
     }
 }
 
-@media screen and (max-width: 1441px) {
+@media screen and (max-width: 769px) {
     .safetyPolicySec {
         .contentWrapper {
-            .middleSec {
-                display: none;
+            .bottomSec {
+                gap: 25px;
+
+                .leftSec, .rightSec {
+                    gap: 25px;
+                }
             }
         }
     }
 }
-@media screen and (min-width: 1441px) {
-    .safetyPolicySec {
-        .mobImgWrapper {
-            display: none;
-        }
-    }
-}
+
+
 @media screen and (max-width: 426px) {
     .safetyPolicySec {
+        margin-block: 0 80px;
         .title {
-            margin-block: 0;
         }
         .mobImgWrapper {
             img {
@@ -132,5 +142,3 @@
         }
     }
 }
-
-

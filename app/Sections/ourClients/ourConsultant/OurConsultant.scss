@@ -45,3 +45,11 @@
         }
     }
 }
+
+@media screen and (max-width: 426px) {
+    .ourConsultantSec {
+        .logo-grid {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}

@@ -1,5 +1,7 @@
 "use client";
 
+import "./Navbar.scss";
+
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -7,7 +9,6 @@ import { useState } from "react";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import MobileNav from "../MobileNav/MobileNav";
-import "./Navbar.scss";
 
 const Navbar = () => {
     const [aboutAnchorEl, setAboutAnchorEl] = useState(null);

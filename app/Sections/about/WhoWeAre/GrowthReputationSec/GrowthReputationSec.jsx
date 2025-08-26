@@ -7,7 +7,7 @@ const GrowthReputationSec = () => {
         <div className="wrapper">
             <div className="growthRepSec">
                 <div className="leftSec">
-                    <h1 className="title">Our Growing <br/>Reputation</h1>
+                    <h1 className="title">Our Growing Reputation</h1>
                     <div className="contents">
                         <div className="bullet">
                             <h1>01</h1>
