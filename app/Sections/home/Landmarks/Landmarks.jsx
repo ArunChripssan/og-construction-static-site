@@ -11,7 +11,7 @@ const Landmarks = () => {
     return (
         <div className="wrapper">
             <div className="landmarksSection">
-                <h2>
+                <h2 className="title">
                     Landmarks <span>in OMAN</span>
                 </h2>
                 <div className="landmarksGrid">
