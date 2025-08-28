@@ -1,10 +1,12 @@
 "use client";
 
-import React, { useEffect, useState, useRef } from "react";
 import "./MobileNav.scss";
-import { motion, AnimatePresence } from "framer-motion";
+
 import Link from "next/link";
 import Image from "next/image";
+import React, { useEffect, useState, useRef } from "react";
+
+import { motion, AnimatePresence } from "framer-motion";
 
 const MobileNav = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -17,9 +19,9 @@ const MobileNav = () => {
 
     const closeMenu = () => {
         setMenuOpen(false);
-        setIsAboutSubMenuOpen(false); 
+        setIsAboutSubMenuOpen(false);
         setAboutSubmenu(false);
-        setIsProjectSubMenuOpen(false); 
+        setIsProjectSubMenuOpen(false);
         setProjectSubmenu(false);
     };
 
@@ -42,7 +44,13 @@ const MobileNav = () => {
         return () => {
             document.removeEventListener("mousedown", handleClickOutside);
         };
-    }, [menuOpen]); 
+    }, [menuOpen]);
+
+    const openProfilePdf = () => {
+        const pdfUrl = '/assets/profileOg.pdf';
+        window.open(pdfUrl, "_blank");
+        closeMenu();
+    };
 
     return (
         <AnimatePresence>
@@ -206,13 +214,12 @@ const MobileNav = () => {
                                             </Link>
                                         </li>
                                         <li className="nav-item">
-                                            <Link
+                                            <div
                                                 className="nav-link"
-                                                href=""
-                                                onClick={closeMenu}
+                                                onClick={openProfilePdf}
                                             >
                                                 PROFILE
-                                            </Link>
+                                            </div>
                                         </li>
                                         <li className="nav-item">
                                             <Link

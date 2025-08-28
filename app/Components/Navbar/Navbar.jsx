@@ -30,6 +30,11 @@ const Navbar = () => {
         setProjectsAnchorEl(null);
     };
 
+    const openProfilePdf = () => {
+        const pdfUrl = '/assets/profileOg.pdf';
+        window.open(pdfUrl, "_blank");
+    };
+
     return (
         <>
             <nav className="nav">
@@ -177,9 +182,9 @@ const Navbar = () => {
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" href="">
+                                <div className="nav-link" onClick={openProfilePdf}>
                                     <p className="nav-item-name">PROFILE</p>
-                                </Link>
+                                </div>
                             </li>
                         </ul>
                         <Link href="/contact">
