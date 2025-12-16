@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import {ourServices, projects} from '../../../data/footer'
+import { ourServices, projects } from '../../../data/footer'
 import './Footer.scss'
 
 const Footer = () => {
@@ -9,11 +9,53 @@ const Footer = () => {
         <div className="wrapper">
             <div className="footer-container">
                 <div className="our-services">
-                    <h1>Our Services</h1>
+                    {/* <h1>Our Services</h1>
                     {ourServices.map((data, i) => (
                         <p key={data.id}>{data.title}</p>
-                    ))}
+                    ))} */}
+                    <Image
+                        src="/assets/logo.jpg"
+                        alt=""
+                        width={180}
+                        height={50}
+                        className="logo"
+                    />
+                    <p style={{ width: "350px" }}>With over 20 years of excellence, we deliver world-class construction solutions tailored to your vision. Transforming blueprints into breathtaking realities.</p>
+
+
                 </div>
+                <div className="projects">
+                    <h1>Quick Links</h1>
+
+                    <ul>
+                        <li>
+                                                    <Link href="/#topsec">Home</Link>
+
+                            
+                        </li>
+                        <li>
+                            <Link href="/about">Who We Are</Link>
+                        </li>
+                        <li>
+                            <Link href="/awards">Awards & Certifications</Link>
+                        </li>
+                        <li>
+                            <Link href="/services">Services</Link>
+                        </li>
+                        
+                        <li>
+                            <Link href="/ourClients">Our Clients</Link>
+                        </li>
+                        <li>
+                            <Link href="/careers">Careers</Link>
+                        </li>
+
+                        <li>
+                            <Link href="/contact">Contact Us</Link>
+                        </li>
+                    </ul>
+                </div>
+
                 <div className="projects">
                     <h1>Projects</h1>
                     {projects.map((data, i) => (
@@ -35,7 +77,7 @@ const Footer = () => {
                 </p>
                 <div className="social-media">
                     <Link href="">
-                        <Image 
+                        <Image
                             src="/assets/icons/facebook.png"
                             alt=""
                             width={24}
@@ -43,7 +85,7 @@ const Footer = () => {
                         />
                     </Link>
                     <Link href="">
-                        <Image 
+                        <Image
                             src="/assets/icons/linkedin.png"
                             alt=""
                             width={24}
@@ -51,7 +93,7 @@ const Footer = () => {
                         />
                     </Link>
                     <Link href="">
-                        <Image 
+                        <Image
                             src="/assets/icons/instagram.png"
                             alt=""
                             width={24}
@@ -59,7 +101,7 @@ const Footer = () => {
                         />
                     </Link>
                     <Link href="">
-                        <Image 
+                        <Image
                             src="/assets/icons/whatsapp.png"
                             alt=""
                             width={24}
@@ -67,7 +109,7 @@ const Footer = () => {
                         />
                     </Link>
                     <Link href="">
-                        <Image 
+                        <Image
                             src="/assets/icons/twitter.png"
                             alt=""
                             width={24}

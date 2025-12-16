@@ -35,10 +35,10 @@ export const diplomaticAndMinistries = [
         id: 9,
         imgLink: "/assets/ourClients/diplomaticMinistries/logo9.jpg"
     },    
-    {
-        id: 10,
-        imgLink: "/assets/ourClients/diplomaticMinistries/logo10.jpg"
-    },    
+    // {
+    //     id: 10,
+    //     imgLink: "/assets/ourClients/diplomaticMinistries/logo10.jpg"
+    // },    
     {
         id: 11,
         imgLink: "/assets/ourClients/diplomaticMinistries/logo11.jpeg"
@@ -142,10 +142,10 @@ export const privateCompanies = [
         id: 22,
         imgLink: "/assets/ourClients/privateCompanies/logo22.png"
     },    
-    {
-        id: 23,
-        imgLink: "/assets/ourClients/privateCompanies/logo23.png"
-    },    
+    // {
+    //     id: 23,
+    //     imgLink: "/assets/ourClients/privateCompanies/logo23.png"
+    // },    
     {
         id: 24,
         imgLink: "/assets/ourClients/privateCompanies/logo24.png"
@@ -178,10 +178,10 @@ export const privateCompanies = [
         id: 31,
         imgLink: "/assets/ourClients/privateCompanies/logo31.jpg"
     },    
-    {
-        id: 32,
-        imgLink: "/assets/ourClients/privateCompanies/logo32.jpg"
-    },    
+    // {
+    //     id: 32,
+    //     imgLink: "/assets/ourClients/privateCompanies/logo32.jpg"
+    // },    
     {
         id: 33,
         imgLink: "/assets/ourClients/privateCompanies/logo33.jpeg"
@@ -229,10 +229,10 @@ export const ourConsultant = [
         id: 8,
         imgLink: "/assets/ourClients/consultant/logo8.jpg"
     },    
-    {
-        id: 9,
-        imgLink: "/assets/ourClients/consultant/logo9.jpg"
-    },    
+    // {
+    //     id: 9,
+    //     imgLink: "/assets/ourClients/consultant/logo9.jpg"
+    // },    
     {
         id: 10,
         imgLink: "/assets/ourClients/consultant/logo10.jpg"
@@ -317,10 +317,10 @@ export const ourConsultant = [
         id: 30,
         imgLink: "/assets/ourClients/consultant/logo30.png"
     },    
-    {
-        id: 31,
-        imgLink: "/assets/ourClients/consultant/logo31.png"
-    },    
+    // {
+    //     id: 31,
+    //     imgLink: "/assets/ourClients/consultant/logo31.png"
+    // },    
     {
         id: 32,
         imgLink: "/assets/ourClients/consultant/logo32.png"

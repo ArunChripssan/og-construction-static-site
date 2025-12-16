@@ -9,6 +9,15 @@
     margin-bottom: 80px;
     padding-block: 50px;
 
+ .cv{
+    padding-top: 25px;
+    display: flex;
+    justify-content: center;
+
+    span{
+       color: #17beff;
+    }
+ }
     .container{
         display: flex;
         align-items: center;

@@ -66,5 +66,56 @@ export const onGoingProjects = [
         imgurl: [
             "/assets/onGoingProjects/img10.png",
         ],
-    }
+    },
+    {
+        id: 7,
+        title: "INTEGRATED CENTER OF COLLECTION, SORTING AND MARKETING FOR AGRICULTURAL PRODUCTS (AL NAJD)",
+        client: "Nakheel Oman Development Company",
+        consultant: "Al Manarah Engineering Consultant",
+        value: "1,800,000.00",
+        location: "Thumrit",
+        category: "Specialized",
+        imgurl: [
+            "/assets/onGoingProjects/img11.jpg",
+        ],
+    },
+    {
+        id: 8,
+        title: "Private Japanese Villa",
+        client: "Saud Bhawan International",
+        consultant: "Design Unit Engineering Consultant",
+        value: "1,400,000.00",
+        location: "Amarat",
+        category: "Specialized",
+        imgurl: [
+            "/assets/onGoingProjects/img12.jpg",
+        ],
+    },
+    {
+        id: 9,
+        title: "12 villa at Al Quram",
+        client: "Abdullah Rashid Abdullah Al Kalbani",
+        consultant: "Al Manarah Engineering",
+        value: "1,100,000.00",
+        location: "Amarat",
+        category: "Specialized",
+        imgurl: [
+            "/assets/onGoingProjects/img13.jpg",
+        ],
+    },
+    {
+        id: 10,
+        title: "Mosque & Ancillary building at Sohar",
+        client: "M/S Sohar General Trading",
+        consultant: "M/s. Al Manarah Engineering consultant",
+        value: "700,000.00",
+        location: "Amarat",
+        category: "Specialized",
+        imgurl: [
+            "/assets/onGoingProjects/img13.jpg",
+        ],
+    },
+ 
+                
+
 ];

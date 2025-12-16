@@ -24,7 +24,7 @@ const Achievments = () => {
                             width={86}
                             height={86}
                         />
-                        <h1>24+</h1>
+                        <h1>25+</h1>
                         <p>Years of Experience</p>
                     </div>
                     <div className="card">

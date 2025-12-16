@@ -279,7 +279,7 @@ const Experience = () => {
         >
             <div className="wrapper">
                 <h1 className="bold title" ref={titleRef}>
-                    We've Been Building For <span className="neonColor">Over 24 Years</span>
+                    We've Been Building For <span className="neonColor">Over 25 Years</span>
                 </h1>
                 <div className="container">
                     <div className="hero-image">
@@ -298,7 +298,7 @@ const Experience = () => {
                                 className="stats-overlay"
                                 ref={statsOverlayRef}
                             >
-                                <div className="stats-number">24+</div>
+                                <div className="stats-number">25+</div>
                                 <div className="stats-label">
                                     Years Experience
                                 </div>

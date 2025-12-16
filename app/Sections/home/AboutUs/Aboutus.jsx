@@ -34,7 +34,7 @@ const Aboutus = () => {
                                 />
                             </div>
                             <div className="text">
-                                <h1>24 +</h1>
+                                <h1>25 +</h1>
                                 <p>Years of Experience</p>
                             </div>
                         </div>

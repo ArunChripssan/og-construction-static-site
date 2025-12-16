@@ -42,7 +42,7 @@ const ServiceContactUs = () => {
                                     width={32}
                                     height={32}
                                     />
-                                <p>Building and home renovation today is more exciting than it has ever been! Oasis Grace LLC is a well established renovation, extension, and home builder in the Sultanate of Oman, with over 11 years experience and with a reputation for reliability and dependability. </p>
+                                <p>At Oasis Grace LLC, we believe your home should tell your story. Whether it’s a new build, an extension, or a renovation, we bring more than 25 years of trusted experience to create spaces that truly reflect your vision.</p>
                             </div>
                             <div className="text">
                                 <Image
@@ -51,7 +51,7 @@ const ServiceContactUs = () => {
                                     width={32}
                                     height={32}
                                     />
-                                <p>Oasis Grace LLC ensures you are rewarded with a Iifetime investment you’ll be proud of.</p>
+                                <p>With a reputation for reliability and craftsmanship, we’re here to make the process smooth, enjoyable, and rewarding. Every project we deliver is not just a structure—it’s a lasting investment and a place you’ll be proud to call home.</p>
                             </div>
                         </div>
                     </div>

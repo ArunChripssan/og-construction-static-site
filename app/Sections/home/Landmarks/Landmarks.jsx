@@ -12,7 +12,7 @@ const Landmarks = () => {
         <div className="wrapper">
             <div className="landmarksSection">
                 <h2 className="title">
-                    Landmarks <span>in OMAN</span>
+                    Landmark Projects<span> in OMAN</span>
                 </h2>
                 <div className="landmarksGrid">
                     <div className="mainImage">

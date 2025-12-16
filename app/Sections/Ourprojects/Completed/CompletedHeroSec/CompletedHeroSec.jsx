@@ -34,7 +34,7 @@ const CompletedHeroSec = () => {
                                 of their kind. 
                             </p>
                         </div>
-                        <div className="text">
+                        {/* <div className="text">
                             <Image
                                 src="/assets/icons/double-tick.png"
                                 alt=""
@@ -49,7 +49,7 @@ const CompletedHeroSec = () => {
                                 infrastructure, many of which will be the first
                                 of their kind. 
                             </p>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

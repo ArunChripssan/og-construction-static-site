@@ -37,7 +37,7 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className="nav">
+            <nav className="nav" id="topsec">
                 <div className="wrapper">
                     <div className="container">
                         <a href="/">

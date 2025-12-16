@@ -58,7 +58,7 @@ const ExpTimeline = () => {
                             height={80}
                         />
                         <div className="contents">
-                            <h1>24+</h1>
+                            <h1>25+</h1>
                             <h2>
                                 {" "}
                                 Years of <br />

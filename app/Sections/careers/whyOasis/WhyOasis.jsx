@@ -18,7 +18,7 @@ const WhyOasis = () => {
                     />
                 </div>
                 <div className="rightSec">
-                    <h1>Why Oasis LLC?</h1>
+                    <h1>Why Join Oasis Grace LLC?</h1>
                     <div className="content" >
                         {whyOasis.map((data, i) => 
                             <div className="text" key={data.id}>
@@ -34,6 +34,7 @@ const WhyOasis = () => {
                     </div>
                 </div>
             </div>
+            <div className="cv"><h2>You can mail your CV with the latest photograph to <span>hr@oasisgrace.com</span></h2></div>
         </div>
     </div>
   );

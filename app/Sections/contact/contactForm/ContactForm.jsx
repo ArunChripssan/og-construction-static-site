@@ -64,7 +64,7 @@ const ContactForm = () => {
                             </div>
                         </div>
                         <div className="workingHours">
-                            <Image
+                            {/* <Image
                                 src="/assets/icons/workingHrs.png"
                                 alt=""
                                 width={24}
@@ -74,7 +74,7 @@ const ContactForm = () => {
                                 <h3>Working Hours</h3>
                                 <p>M-F: 8am – 6pm</p>
                                 <p>S-S: 10am – 4pm</p>
-                            </div>
+                            </div> */}
                         </div>
                         <div className="communication">
                             <Image
@@ -93,7 +93,7 @@ const ContactForm = () => {
                                             width={16}
                                             height={16}
                                         />
-                                        <p>oasisgrace.com</p>
+                                        <p> info@oasisgrace.com</p>
                                     </div>
                                     <div className="contact">
                                         <Image

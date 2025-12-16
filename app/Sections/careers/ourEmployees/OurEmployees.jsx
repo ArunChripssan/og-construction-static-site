@@ -19,7 +19,7 @@ const OurEmployees = () => {
                         />
                         <div className="text">
                             <p>People Joined</p>
-                            <h2 className="count">254K+</h2>
+                            <h2 className="count">2540+</h2>
                         </div>
                     </div>
                     <div className="projectsCompleted">
