@@ -8,11 +8,11 @@ const Footer = () => {
     return (
         <div className="wrapper">
             <div className="footer-container">
-                <div className="our-services">
-                    {/* <h1>Our Services</h1>
+                {/* <div className="projects">
+                     <h1>Our Services</h1>
                     {ourServices.map((data, i) => (
                         <p key={data.id}>{data.title}</p>
-                    ))} */}
+                    ))} 
                     <Image
                         src="/assets/logo.jpg"
                         alt=""
@@ -20,8 +20,19 @@ const Footer = () => {
                         height={50}
                         className="logo"
                     />
-                    <p style={{ width: "350px" }}>With over 20 years of excellence, we deliver world-class construction solutions tailored to your vision. Transforming blueprints into breathtaking realities.</p>
+                    <p style={{ width: "350px"}}>With over 25 years of excellence, we deliver world-class construction solutions tailored to your vision. Transforming blueprints into breathtaking realities.</p>
 
+
+                </div> */}
+                  <div className="projects">
+                    <Image
+                        src="/assets/logo.jpg"
+                        alt=""
+                        width={180}
+                        height={50}
+                        className="logo"
+                    />
+                    <p>With over 25 years of excellence, we deliver world-class construction solutions tailored to your vision. Transforming blueprints into breathtaking realities.</p>
 
                 </div>
                 <div className="projects">
@@ -29,29 +40,30 @@ const Footer = () => {
 
                     <ul>
                         <li>
-                                                    <Link href="/#topsec">Home</Link>
+                           <p> <Link href="/#topsec">Home</Link></p>
 
+
+                        </li>
+                        <li>
+                            <p><Link href="/about">Who We Are</Link></p>
                             
                         </li>
                         <li>
-                            <Link href="/about">Who We Are</Link>
+                            <p><Link href="/awards">Awards & Certifications</Link></p>
                         </li>
                         <li>
-                            <Link href="/awards">Awards & Certifications</Link>
-                        </li>
-                        <li>
-                            <Link href="/services">Services</Link>
-                        </li>
-                        
-                        <li>
-                            <Link href="/ourClients">Our Clients</Link>
-                        </li>
-                        <li>
-                            <Link href="/careers">Careers</Link>
+                            <p><Link href="/services">Services</Link></p>
                         </li>
 
                         <li>
-                            <Link href="/contact">Contact Us</Link>
+                            <p><Link href="/ourClients">Our Clients</Link></p>
+                        </li>
+                        <li>
+                            <p><Link href="/careers">Careers</Link></p>
+                        </li>
+
+                        <li>
+                            <p><Link href="/contact">Contact Us</Link></p>
                         </li>
                     </ul>
                 </div>

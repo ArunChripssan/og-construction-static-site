@@ -34,7 +34,9 @@ const WhyOasis = () => {
                     </div>
                 </div>
             </div>
-            <div className="cv"><h2>You can mail your CV with the latest photograph to <span>hr@oasisgrace.com</span></h2></div>
+            <div className="cv"><h2>You can mail your CV with the latest photograph to <a href="mailto:hr@oasisgrace.com">
+      <span>hr@oasisgrace.com</span>
+    </a></h2></div>
         </div>
     </div>
   );

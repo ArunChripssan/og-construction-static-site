@@ -33,7 +33,7 @@ const AboutHeroSec = () => {
                                 Muscat, Sultanate of Oman.
                             </p>
                             <p>
-                                Over the last 24 years, we have established
+                                Over the last 25 years, we have established
                                 ourselves as the
                                 <span className="color">
                                     "Most Respected and Trusted company "

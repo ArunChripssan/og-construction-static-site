@@ -161,7 +161,7 @@ const ProjectDialog = ({ open, onClose, project }) => {
                         height: { xs: "auto", sm: "600px" },
                     }}
                 >
-					{/* left */}
+                    {/* left */}
                     <Box
                         sx={{
                             flex: 2,
@@ -176,8 +176,8 @@ const ProjectDialog = ({ open, onClose, project }) => {
                         <img
                             src={
                                 project.imgurl &&
-                                Array.isArray(project.imgurl) &&
-                                project.imgurl.length > 0
+                                    Array.isArray(project.imgurl) &&
+                                    project.imgurl.length > 0
                                     ? project.imgurl[0]
                                     : "/assets/placeholder.jpg"
                             }
@@ -201,7 +201,7 @@ const ProjectDialog = ({ open, onClose, project }) => {
                             gap: 3,
                         }}
                     >
-						{/* Title */}
+                        {/* Title */}
                         <Box sx={{ display: "flex", alignItems: "center" }}>
                             <BusinessIcon sx={{ mr: 2, color: "#267390" }} />
                             <Box>
@@ -214,7 +214,7 @@ const ProjectDialog = ({ open, onClose, project }) => {
                             </Box>
                         </Box>
 
-						{/* Client */}
+                        {/* Client */}
                         <Box sx={{ display: "flex", alignItems: "center" }}>
                             <PersonIcon sx={{ mr: 2, color: "#267390" }} />
                             <Box>
@@ -228,7 +228,7 @@ const ProjectDialog = ({ open, onClose, project }) => {
                         </Box>
 
                         {/* Consultant */}
-                        <Box sx={{ display: "flex", alignItems: "center" }}>
+                        {/* <Box sx={{ display: "flex", alignItems: "center" }}>
                             <ArchitectureIcon
                                 sx={{ mr: 2, color: "#267390" }}
                             />
@@ -240,7 +240,21 @@ const ProjectDialog = ({ open, onClose, project }) => {
                                     {project?.consultant}
                                 </Typography>
                             </Box>
-                        </Box>
+                        </Box> */}
+                        {project?.consultant && (
+                            <Box sx={{ display: "flex", alignItems: "center" }}>
+                                <ArchitectureIcon sx={{ mr: 2, color: "#267390" }} />
+                                <Box>
+                                    <Typography variant="body2" color="#267390">
+                                        Consultant
+                                    </Typography>
+                                    <Typography variant="p">
+                                        {project.consultant}
+                                    </Typography>
+                                </Box>
+                            </Box>
+                        )}
+
 
                         {/* Project Value */}
                         <Box sx={{ display: "flex", alignItems: "center" }}>

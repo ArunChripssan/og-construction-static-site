@@ -93,7 +93,9 @@ const ContactForm = () => {
                                             width={16}
                                             height={16}
                                         />
-                                        <p> info@oasisgrace.com</p>
+                                        <p>
+                                            <a href="mailto:info@oasisgrace.com">info@oasisgrace.com</a>
+                                        </p>
                                     </div>
                                     <div className="contact">
                                         <Image
@@ -120,11 +122,13 @@ const ContactForm = () => {
                                     id="name"
                                     {...register("name")}
                                 />
-                                {errors.name && (
+                                  <p className="error">{errors.name ? errors.name.message : "\u00A0"}</p>
+
+                                {/* {errors.name && (
                                     <p className="error">
                                         {errors.name.message}
                                     </p>
-                                )}
+                                )} */}
                             </div>
                             <div className="email">
                                 <label htmlFor="">E-mail</label>
@@ -133,11 +137,13 @@ const ContactForm = () => {
                                     id="email"
                                     {...register("email")}
                                 />
-                                {errors.email && (
+                                  <p className="error">{errors.email ? errors.email.message : "\u00A0"}</p>
+
+                                {/* {errors.email && (
                                     <p className="error">
                                         {errors.email.message}
                                     </p>
-                                )}
+                                )} */}
                             </div>
                         </div>
                         <div className="mobileNumber">

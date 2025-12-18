@@ -11,7 +11,7 @@ const OurServices = () => {
                     <h1 className="title">Our Services</h1>
                     <p>From planning to project completion, we provide a full spectrum of services to bring your vision to life</p>
                     <Link href="/contact">
-                        <button>
+                        <button className="getStartedbtn">
                             Get Started
                         </button>
                     </Link>

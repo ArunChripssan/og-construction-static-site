@@ -15,7 +15,7 @@
         gap: 20px;
 
         .title {
-            background: linear-gradient(90deg, #ffffff, #048dc3 );
+            background: linear-gradient(90deg, #ffffff, #048dc3);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin: 0;
@@ -42,6 +42,27 @@
             color: #17BEFF;
             font-size: 18px;
         }
+
+        .getStartedbtn {
+            outline: none;
+            background-color: #0A1549;
+            padding: 12px 30px;
+            border-radius: 50px;
+            border: 1px solid #17BEFF;
+            color: #17BEFF;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background-color: #0f7bbf;
+                transform: translateY(-2px);
+            }
+
+            &:active {
+                transform: translateY(0);
+            }
+        }
     }
 
     .rightSec {
@@ -55,7 +76,7 @@
             height: 290px;
             background: linear-gradient(to bottom left, #002d4f, #586f87);
             display: flex;
-            flex-direction: column; 
+            flex-direction: column;
             justify-content: center;
             gap: 10px;
             padding: 0 20px;
@@ -80,16 +101,17 @@
                 align-items: center;
                 justify-content: center;
                 border-radius: 50%;
-                
+
                 img {
                     position: relative;
+
                     &::before {
                         position: absolute;
                         inset: 0;
                         content: "";
                         width: 100px;
                         height: 100px;
-                        background: linear-gradient(45deg, #074a65, #17BEFF );
+                        background: linear-gradient(45deg, #074a65, #17BEFF);
                     }
                 }
             }
@@ -120,11 +142,13 @@
     .ourServicesSec {
         .rightSec {
             gap: 30px;
+
             .card {
                 h3 {
                     font-size: 25px;
                 }
             }
+
             .rightCard {
                 margin-top: 0;
             }

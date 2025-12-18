@@ -51,21 +51,20 @@ const Navbar = () => {
                         </a>
                         <ul className="nav-list">
                             <li
-                                className={`nav-item ${
-                                    pathname === "/" ? "active" : ""
-                                }`}
+                                className={`nav-item ${pathname === "/" ? "active" : ""
+                                    }`}
                             >
-                                <Link className="nav-link" href="/">
+                                <Link className="nav-link" href="/" onClick={() => window.scrollTo({ top: 0, behavior: "auto" })}
+                                >
                                     <p className="nav-item-name">HOME</p>
                                 </Link>
                             </li>
                             <li
-                                className={`nav-item  ${
-                                    pathname.startsWith("/about") ||
-                                    pathname.startsWith("/awards")
+                                className={`nav-item  ${pathname.startsWith("/about") ||
+                                        pathname.startsWith("/awards")
                                         ? "active"
                                         : ""
-                                }`}
+                                    }`}
                                 onClick={handleAboutClick}
                             >
                                 <div className="dropDownItem">
@@ -104,9 +103,8 @@ const Navbar = () => {
                             </Menu>
 
                             <li
-                                className={`nav-item ${
-                                    pathname === "/services" ? "active" : ""
-                                }`}
+                                className={`nav-item ${pathname === "/services" ? "active" : ""
+                                    }`}
                             >
                                 <Link className="nav-link" href="/services">
                                     <p className="nav-item-name">SERVICES</p>
@@ -114,12 +112,11 @@ const Navbar = () => {
                             </li>
 
                             <li
-                                className={`nav-item  ${
-                                    pathname.startsWith("/completedProjects") ||
-                                    pathname.startsWith("/onGoingProjects")
+                                className={`nav-item  ${pathname.startsWith("/completedProjects") ||
+                                        pathname.startsWith("/onGoingProjects")
                                         ? "active"
                                         : ""
-                                }`}
+                                    }`}
                                 onClick={handleProjectsClick}
                             >
                                 <div className="dropDownItem">
@@ -164,20 +161,18 @@ const Navbar = () => {
                             </Menu>
 
                             <li
-                                className={`nav-item ${
-                                    pathname === "/ourClients" ? "active" : ""
-                                }`}
+                                className={`nav-item ${pathname === "/ourClients" ? "active" : ""
+                                    }`}
                             >
                                 <Link className="nav-link" href="/ourClients">
                                     <p className="nav-item-name">OUR CLIENTS</p>
                                 </Link>
                             </li>
                             <li
-                                className={`nav-item ${
-                                    pathname === "/careers" ? "active" : ""
-                                }`}
+                                className={`nav-item ${pathname === "/careers" ? "active" : ""
+                                    }`}
                             >
-                                <Link className="nav-link" href="/careers">
+                                <Link className="nav-link" href="/careers" scroll={true}>
                                     <p className="nav-item-name">CAREERS</p>
                                 </Link>
                             </li>

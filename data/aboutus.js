@@ -5,6 +5,6 @@ export const aboutUsDesc = [
     },
     {
         id: "2",
-        desc: "Over the last 24 years, we have established ourselves as the “Most Respected and Trusted company” in the field of general contracting in Oman.",
+        desc: "Over the last 25 years, we have established ourselves as the “Most Respected and Trusted company” in the field of general contracting in Oman.",
     },
 ];

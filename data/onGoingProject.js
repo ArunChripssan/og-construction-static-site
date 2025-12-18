@@ -69,7 +69,7 @@ export const onGoingProjects = [
     },
     {
         id: 7,
-        title: "INTEGRATED CENTER OF COLLECTION, SORTING AND MARKETING FOR AGRICULTURAL PRODUCTS (AL NAJD)",
+        title: "INTEGRATED CENTER OF COLLECTION, SORTING AND MARKETING FOR AGRICULTURAL PRODUCTS",
         client: "Nakheel Oman Development Company",
         consultant: "Al Manarah Engineering Consultant",
         value: "1,800,000.00",

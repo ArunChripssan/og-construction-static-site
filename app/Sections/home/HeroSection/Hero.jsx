@@ -147,7 +147,7 @@ const HeroSection = () => {
                     </h1>
                     
                     <p className="hero-subtitle">
-                        With over 20 years of excellence, we deliver world-class construction solutions tailored to your vision. Transforming blueprints into breathtaking realities.
+                        With over 25 years of excellence, we deliver world-class construction solutions tailored to your vision. Transforming blueprints into breathtaking realities.
                     </p>
                     
                     <div className="cta-container">
